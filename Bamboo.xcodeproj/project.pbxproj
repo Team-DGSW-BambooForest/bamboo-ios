@@ -8,20 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		935560D52935912200CD66C2 /* BambooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935560D42935912200CD66C2 /* BambooApp.swift */; };
-		935560D72935912200CD66C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935560D62935912200CD66C2 /* ContentView.swift */; };
+		935560D72935912200CD66C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935560D62935912200CD66C2 /* MainView.swift */; };
 		935560D92935912300CD66C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935560D82935912300CD66C2 /* Assets.xcassets */; };
-		935560DC2935912300CD66C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935560DB2935912300CD66C2 /* Preview Assets.xcassets */; };
 		935560F929359C5200CD66C2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 935560F829359C5200CD66C2 /* Alamofire */; };
 		9355610129359CB500CD66C2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9355610029359CB500CD66C2 /* RealmSwift */; };
+		936459C929A0C84A00A15CCF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459C829A0C84A00A15CCF /* Button.swift */; };
+		936459CB29A0C88200A15CCF /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459CA29A0C88200A15CCF /* Radio.swift */; };
+		936459CD29A0C89200A15CCF /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459CC29A0C89200A15CCF /* Navigation.swift */; };
+		936459D029A0C8EF00A15CCF /* LinkNavigator in Frameworks */ = {isa = PBXBuildFile; productRef = 936459CF29A0C8EF00A15CCF /* LinkNavigator */; };
+		936459DA29A0CC7C00A15CCF /* FontExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459D929A0CC7C00A15CCF /* FontExt.swift */; };
+		936459DE29A0CE3600A15CCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459DD29A0CE3600A15CCF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		935560D12935912200CD66C2 /* Bamboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bamboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935560D42935912200CD66C2 /* BambooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BambooApp.swift; sourceTree = "<group>"; };
-		935560D62935912200CD66C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		935560D62935912200CD66C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		935560D82935912300CD66C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		935560DB2935912300CD66C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		935560E22935913600CD66C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		936459C829A0C84A00A15CCF /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		936459CA29A0C88200A15CCF /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
+		936459CC29A0C89200A15CCF /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		936459D929A0CC7C00A15CCF /* FontExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExt.swift; sourceTree = "<group>"; };
+		936459DD29A0CE3600A15CCF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			files = (
 				9355610129359CB500CD66C2 /* RealmSwift in Frameworks */,
 				935560F929359C5200CD66C2 /* Alamofire in Frameworks */,
+				936459D029A0C8EF00A15CCF /* LinkNavigator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				935560D42935912200CD66C2 /* BambooApp.swift */,
-				935560D62935912200CD66C2 /* ContentView.swift */,
-				935560D82935912300CD66C2 /* Assets.xcassets */,
+				936459D729A0CA9400A15CCF /* Utilites */,
+				936459C629A0C81A00A15CCF /* Screens */,
 				935560DA2935912300CD66C2 /* Preview Content */,
 			);
 			path = Bamboo;
@@ -68,9 +78,93 @@
 		935560DA2935912300CD66C2 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				935560DB2935912300CD66C2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		936459C529A0C80700A15CCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				935560D82935912300CD66C2 /* Assets.xcassets */,
+				936459DD29A0CE3600A15CCF /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		936459C629A0C81A00A15CCF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				936459D129A0C90300A15CCF /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		936459C729A0C83800A15CCF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				936459CC29A0C89200A15CCF /* Navigation.swift */,
+				936459CA29A0C88200A15CCF /* Radio.swift */,
+				936459C829A0C84A00A15CCF /* Button.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		936459D129A0C90300A15CCF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				936459D629A0CA4600A15CCF /* Intent */,
+				936459D529A0CA4300A15CCF /* Model */,
+				936459D429A0CA3F00A15CCF /* Router */,
+				936459D329A0CA3D00A15CCF /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		936459D329A0CA3D00A15CCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				935560D62935912200CD66C2 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		936459D429A0CA3F00A15CCF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		936459D529A0CA4300A15CCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		936459D629A0CA4600A15CCF /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		936459D729A0CA9400A15CCF /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				936459C529A0C80700A15CCF /* Resources */,
+				936459C729A0C83800A15CCF /* Components */,
+				936459D829A0CAD100A15CCF /* Extensions */,
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
+		936459D829A0CAD100A15CCF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				936459D929A0CC7C00A15CCF /* FontExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +186,7 @@
 			packageProductDependencies = (
 				935560F829359C5200CD66C2 /* Alamofire */,
 				9355610029359CB500CD66C2 /* RealmSwift */,
+				936459CF29A0C8EF00A15CCF /* LinkNavigator */,
 			);
 			productName = Bamboo;
 			productReference = 935560D12935912200CD66C2 /* Bamboo.app */;
@@ -124,6 +219,7 @@
 			packageReferences = (
 				935560F729359C5200CD66C2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				935560FF29359CB500CD66C2 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */,
 			);
 			productRefGroup = 935560D22935912200CD66C2 /* Products */;
 			projectDirPath = "";
@@ -139,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935560DC2935912300CD66C2 /* Preview Assets.xcassets in Resources */,
 				935560D92935912300CD66C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935560D72935912200CD66C2 /* ContentView.swift in Sources */,
+				936459CB29A0C88200A15CCF /* Radio.swift in Sources */,
+				936459C929A0C84A00A15CCF /* Button.swift in Sources */,
+				936459DA29A0CC7C00A15CCF /* FontExt.swift in Sources */,
+				936459CD29A0C89200A15CCF /* Navigation.swift in Sources */,
+				936459DE29A0CE3600A15CCF /* Constants.swift in Sources */,
+				935560D72935912200CD66C2 /* MainView.swift in Sources */,
 				935560D52935912200CD66C2 /* BambooApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +475,14 @@
 				kind = branch;
 			};
 		};
+		936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/interactord/LinkNavigator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -387,6 +495,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 935560FF29359CB500CD66C2 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		936459CF29A0C8EF00A15CCF /* LinkNavigator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */;
+			productName = LinkNavigator;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
