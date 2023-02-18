@@ -12,8 +12,8 @@ enum Bamboo {
     
     // MARK: - Gradient
     static let primary    = LinearGradient(gradient: Gradient(colors: [Bamboo.aqua, Bamboo.green]),
-                                        startPoint: .topLeading,
-                                        endPoint: .bottomTrailing)
+                                           startPoint: .topLeading,
+                                           endPoint: .bottomTrailing)
     
     // MARK: - Colors
     static let green      = Color("Green")

@@ -50,8 +50,9 @@ struct BambooButton: View {
                         .strokeBorder(Bamboo.lightGray,
                                       lineWidth: isSecondary ? 1 : 0)
                 )
+                .roundedEdge(10)
         }
-        .roundedEdge(10)
+        .scaleButton()
         .disabled(disabled)
     }
 }
