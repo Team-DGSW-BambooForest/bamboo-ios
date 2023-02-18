@@ -16,8 +16,9 @@
 		936459CB29A0C88200A15CCF /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459CA29A0C88200A15CCF /* Radio.swift */; };
 		936459CD29A0C89200A15CCF /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459CC29A0C89200A15CCF /* Navigation.swift */; };
 		936459D029A0C8EF00A15CCF /* LinkNavigator in Frameworks */ = {isa = PBXBuildFile; productRef = 936459CF29A0C8EF00A15CCF /* LinkNavigator */; };
-		936459DA29A0CC7C00A15CCF /* FontExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459D929A0CC7C00A15CCF /* FontExt.swift */; };
+		936459DA29A0CC7C00A15CCF /* TextExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459D929A0CC7C00A15CCF /* TextExt.swift */; };
 		936459DE29A0CE3600A15CCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459DD29A0CE3600A15CCF /* Constants.swift */; };
+		936459E029A0D4A900A15CCF /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459DF29A0D4A900A15CCF /* ViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,9 @@
 		936459C829A0C84A00A15CCF /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		936459CA29A0C88200A15CCF /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
 		936459CC29A0C89200A15CCF /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
-		936459D929A0CC7C00A15CCF /* FontExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExt.swift; sourceTree = "<group>"; };
+		936459D929A0CC7C00A15CCF /* TextExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExt.swift; sourceTree = "<group>"; };
 		936459DD29A0CE3600A15CCF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		936459DF29A0D4A900A15CCF /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +164,8 @@
 		936459D829A0CAD100A15CCF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				936459D929A0CC7C00A15CCF /* FontExt.swift */,
+				936459D929A0CC7C00A15CCF /* TextExt.swift */,
+				936459DF29A0D4A900A15CCF /* ViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,8 +251,9 @@
 			files = (
 				936459CB29A0C88200A15CCF /* Radio.swift in Sources */,
 				936459C929A0C84A00A15CCF /* Button.swift in Sources */,
-				936459DA29A0CC7C00A15CCF /* FontExt.swift in Sources */,
+				936459DA29A0CC7C00A15CCF /* TextExt.swift in Sources */,
 				936459CD29A0C89200A15CCF /* Navigation.swift in Sources */,
+				936459E029A0D4A900A15CCF /* ViewExt.swift in Sources */,
 				936459DE29A0CE3600A15CCF /* Constants.swift in Sources */,
 				935560D72935912200CD66C2 /* MainView.swift in Sources */,
 				935560D52935912200CD66C2 /* BambooApp.swift in Sources */,
