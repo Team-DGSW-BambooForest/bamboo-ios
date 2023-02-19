@@ -26,6 +26,7 @@
 		93CE181B29A2570E00A5C8A2 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181A29A2570E00A5C8A2 /* MainModel.swift */; };
 		93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181F29A258E000A5C8A2 /* LoginView.swift */; };
 		93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182129A258E800A5C8A2 /* LoginModel.swift */; };
+		93CE182529A25AD800A5C8A2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182429A25AD800A5C8A2 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		93CE181A29A2570E00A5C8A2 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		93CE181F29A258E000A5C8A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		93CE182129A258E800A5C8A2 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		93CE182429A25AD800A5C8A2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				935560D82935912300CD66C2 /* Assets.xcassets */,
 				936459DD29A0CE3600A15CCF /* Assets.swift */,
+				93CE182429A25AD800A5C8A2 /* Constant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				93CE181529A207D800A5C8A2 /* ProfileSelectionView.swift in Sources */,
 				936459CB29A0C88200A15CCF /* Radio.swift in Sources */,
 				936459C929A0C84A00A15CCF /* Button.swift in Sources */,
+				93CE182529A25AD800A5C8A2 /* Constant.swift in Sources */,
 				936459DA29A0CC7C00A15CCF /* TextExt.swift in Sources */,
 				936459E229A0F28400A15CCF /* Haptic.swift in Sources */,
 				936459CD29A0C89200A15CCF /* Navigation.swift in Sources */,
