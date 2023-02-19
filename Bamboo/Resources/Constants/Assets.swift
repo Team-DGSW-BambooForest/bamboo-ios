@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  Assets.swift
 //  Bamboo
 //
 //  Created by Mercen on 2023/02/18.
@@ -7,8 +7,30 @@
 
 import SwiftUI
 
-// MARK: - Assets to Enum
-enum Bamboo {
+// MARK: - Assets to Class
+class Bamboo {
+    
+    // MARK: - Makes Hexcode to UIColor
+    public static func hexToColor(hex: String) -> UIColor {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        return UIColor(red: CGFloat(int >> 16) / 255,
+                       green: CGFloat(int >> 8 & 0xFF) / 255,
+                       blue: CGFloat(int & 0xFF) / 255,
+                       alpha: 1)
+    }
+    
+    // MARK: - Makes Two Hexcodes to Color
+    public static func makeColor(_ light: String, dark: String? = nil) -> Color {
+        let lightColor = hexToColor(hex: light)
+        if dark == nil {
+            return Color(lightColor)
+        } else {
+            let darkColor = hexToColor(hex: dark!)
+            return Color(UIColor { $0.userInterfaceStyle == .dark ? darkColor : lightColor })
+        }
+    }
     
     // MARK: - Gradient
     static let primary    = LinearGradient(gradient: Gradient(colors: [Bamboo.aqua, Bamboo.green]),

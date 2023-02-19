@@ -10,6 +10,9 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         VStack {
+            BambooNavigation {
+                Text("aa")
+            }
             BambooButton(action: {
                 
             }, text: "Hello")

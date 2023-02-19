@@ -17,10 +17,15 @@
 		936459CD29A0C89200A15CCF /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459CC29A0C89200A15CCF /* Navigation.swift */; };
 		936459D029A0C8EF00A15CCF /* LinkNavigator in Frameworks */ = {isa = PBXBuildFile; productRef = 936459CF29A0C8EF00A15CCF /* LinkNavigator */; };
 		936459DA29A0CC7C00A15CCF /* TextExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459D929A0CC7C00A15CCF /* TextExt.swift */; };
-		936459DE29A0CE3600A15CCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459DD29A0CE3600A15CCF /* Constants.swift */; };
+		936459DE29A0CE3600A15CCF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459DD29A0CE3600A15CCF /* Assets.swift */; };
 		936459E029A0D4A900A15CCF /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459DF29A0D4A900A15CCF /* ViewExt.swift */; };
 		936459E229A0F28400A15CCF /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459E129A0F28400A15CCF /* Haptic.swift */; };
 		936459E429A0F2D500A15CCF /* ButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459E329A0F2D500A15CCF /* ButtonExt.swift */; };
+		93CE181529A207D800A5C8A2 /* ProfileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181429A207D800A5C8A2 /* ProfileSelectionView.swift */; };
+		93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93CE181829A20A4D00A5C8A2 /* Kingfisher */; };
+		93CE181B29A2570E00A5C8A2 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181A29A2570E00A5C8A2 /* MainModel.swift */; };
+		93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181F29A258E000A5C8A2 /* LoginView.swift */; };
+		93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182129A258E800A5C8A2 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +38,15 @@
 		936459CA29A0C88200A15CCF /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
 		936459CC29A0C89200A15CCF /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		936459D929A0CC7C00A15CCF /* TextExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExt.swift; sourceTree = "<group>"; };
-		936459DD29A0CE3600A15CCF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		936459DD29A0CE3600A15CCF /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		936459DF29A0D4A900A15CCF /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 		936459E129A0F28400A15CCF /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		936459E329A0F2D500A15CCF /* ButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExt.swift; sourceTree = "<group>"; };
+		93CE181429A207D800A5C8A2 /* ProfileSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectionView.swift; sourceTree = "<group>"; };
+		93CE181629A20A0F00A5C8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		93CE181A29A2570E00A5C8A2 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		93CE181F29A258E000A5C8A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		93CE182129A258E800A5C8A2 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 				9355610129359CB500CD66C2 /* RealmSwift in Frameworks */,
 				935560F929359C5200CD66C2 /* Alamofire in Frameworks */,
 				936459D029A0C8EF00A15CCF /* LinkNavigator in Frameworks */,
+				93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +84,9 @@
 		935560D32935912200CD66C2 /* Bamboo */ = {
 			isa = PBXGroup;
 			children = (
-				935560D42935912200CD66C2 /* BambooApp.swift */,
-				936459D729A0CA9400A15CCF /* Utilites */,
-				936459C629A0C81A00A15CCF /* Screens */,
+				93CE181629A20A0F00A5C8A2 /* Info.plist */,
+				936459C529A0C80700A15CCF /* Resources */,
+				936459C629A0C81A00A15CCF /* Sources */,
 				935560DA2935912300CD66C2 /* Preview Content */,
 			);
 			path = Bamboo;
@@ -91,21 +102,52 @@
 		936459C529A0C80700A15CCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				935560D82935912300CD66C2 /* Assets.xcassets */,
-				936459DD29A0CE3600A15CCF /* Constants.swift */,
+				935560D42935912200CD66C2 /* BambooApp.swift */,
+				93CE182329A2594200A5C8A2 /* Constants */,
+				93CE181D29A2588300A5C8A2 /* Components */,
+				93CE181C29A2587000A5C8A2 /* Extensions */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		936459C629A0C81A00A15CCF /* Screens */ = {
+		936459C629A0C81A00A15CCF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				936459D129A0C90300A15CCF /* Main */,
+				93CE181E29A258C600A5C8A2 /* Login */,
+				936459D329A0CA3D00A15CCF /* Main */,
 			);
-			path = Screens;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		936459C729A0C83800A15CCF /* Components */ = {
+		936459D329A0CA3D00A15CCF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				93CE181329A207C900A5C8A2 /* Elements */,
+				935560D62935912200CD66C2 /* MainView.swift */,
+				93CE181A29A2570E00A5C8A2 /* MainModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		93CE181329A207C900A5C8A2 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				93CE181429A207D800A5C8A2 /* ProfileSelectionView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		93CE181C29A2587000A5C8A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				936459E329A0F2D500A15CCF /* ButtonExt.swift */,
+				936459D929A0CC7C00A15CCF /* TextExt.swift */,
+				936459DF29A0D4A900A15CCF /* ViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93CE181D29A2588300A5C8A2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				936459CC29A0C89200A15CCF /* Navigation.swift */,
@@ -116,64 +158,22 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		936459D129A0C90300A15CCF /* Main */ = {
+		93CE181E29A258C600A5C8A2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				936459D629A0CA4600A15CCF /* Intent */,
-				936459D529A0CA4300A15CCF /* Model */,
-				936459D429A0CA3F00A15CCF /* Router */,
-				936459D329A0CA3D00A15CCF /* View */,
+				93CE181F29A258E000A5C8A2 /* LoginView.swift */,
+				93CE182129A258E800A5C8A2 /* LoginModel.swift */,
 			);
-			path = Main;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		936459D329A0CA3D00A15CCF /* View */ = {
+		93CE182329A2594200A5C8A2 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				935560D62935912200CD66C2 /* MainView.swift */,
+				935560D82935912300CD66C2 /* Assets.xcassets */,
+				936459DD29A0CE3600A15CCF /* Assets.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		936459D429A0CA3F00A15CCF /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		936459D529A0CA4300A15CCF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		936459D629A0CA4600A15CCF /* Intent */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Intent;
-			sourceTree = "<group>";
-		};
-		936459D729A0CA9400A15CCF /* Utilites */ = {
-			isa = PBXGroup;
-			children = (
-				936459C529A0C80700A15CCF /* Resources */,
-				936459C729A0C83800A15CCF /* Components */,
-				936459D829A0CAD100A15CCF /* Extensions */,
-			);
-			path = Utilites;
-			sourceTree = "<group>";
-		};
-		936459D829A0CAD100A15CCF /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				936459E329A0F2D500A15CCF /* ButtonExt.swift */,
-				936459D929A0CC7C00A15CCF /* TextExt.swift */,
-				936459DF29A0D4A900A15CCF /* ViewExt.swift */,
-			);
-			path = Extensions;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +196,7 @@
 				935560F829359C5200CD66C2 /* Alamofire */,
 				9355610029359CB500CD66C2 /* RealmSwift */,
 				936459CF29A0C8EF00A15CCF /* LinkNavigator */,
+				93CE181829A20A4D00A5C8A2 /* Kingfisher */,
 			);
 			productName = Bamboo;
 			productReference = 935560D12935912200CD66C2 /* Bamboo.app */;
@@ -229,6 +230,7 @@
 				935560F729359C5200CD66C2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				935560FF29359CB500CD66C2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */,
+				93CE181729A20A4D00A5C8A2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 935560D22935912200CD66C2 /* Products */;
 			projectDirPath = "";
@@ -255,6 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */,
+				93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */,
+				93CE181529A207D800A5C8A2 /* ProfileSelectionView.swift in Sources */,
 				936459CB29A0C88200A15CCF /* Radio.swift in Sources */,
 				936459C929A0C84A00A15CCF /* Button.swift in Sources */,
 				936459DA29A0CC7C00A15CCF /* TextExt.swift in Sources */,
@@ -262,7 +267,8 @@
 				936459CD29A0C89200A15CCF /* Navigation.swift in Sources */,
 				936459E429A0F2D500A15CCF /* ButtonExt.swift in Sources */,
 				936459E029A0D4A900A15CCF /* ViewExt.swift in Sources */,
-				936459DE29A0CE3600A15CCF /* Constants.swift in Sources */,
+				93CE181B29A2570E00A5C8A2 /* MainModel.swift in Sources */,
+				936459DE29A0CE3600A15CCF /* Assets.swift in Sources */,
 				935560D72935912200CD66C2 /* MainView.swift in Sources */,
 				935560D52935912200CD66C2 /* BambooApp.swift in Sources */,
 			);
@@ -396,12 +402,14 @@
 				DEVELOPMENT_TEAM = 56V747V83R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bamboo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "대대숲";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -427,12 +435,14 @@
 				DEVELOPMENT_TEAM = 56V747V83R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bamboo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "대대숲";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,6 +505,14 @@
 				minimumVersion = 0.5.4;
 			};
 		};
+		93CE181729A20A4D00A5C8A2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -512,6 +530,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */;
 			productName = LinkNavigator;
+		};
+		93CE181829A20A4D00A5C8A2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93CE181729A20A4D00A5C8A2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

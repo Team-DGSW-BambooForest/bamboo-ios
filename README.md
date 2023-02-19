@@ -1,7 +1,7 @@
 # Bamboo-iOS
 
 ### ☘️ 개발 원칙
-- MVI 디자인 패턴
+- MV State 아키텍처
 - SPM 사용
 - 빌드 타깃 iOS 14
 - iPadOS 대응
@@ -14,6 +14,8 @@
 - Combine
 - Alamofire
 - RealmSwift
+- KingFisher
+- LinkNavigator
 
 ### 🍃 커밋 규칙
 >[이모지] 상세내용
