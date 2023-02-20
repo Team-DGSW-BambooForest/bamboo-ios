@@ -9,19 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack {
-            BambooNavigation {
-                Text("aa")
-            }
-            BambooButton(action: {
-                
-            }, text: "Hello")
-            BambooButton(action: {
-                
-            }, text: "Hello")
-            .secondary()
-        }
-        .padding()
+        Text("test")
     }
 }
 

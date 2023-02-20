@@ -56,5 +56,6 @@ class Bamboo {
     static let search     = Image("Search")
     static let top        = Image("Top")
     static let unreadMail = Image("UnreadMail")
+    static let anon       = Image("Anon")
 }
 
