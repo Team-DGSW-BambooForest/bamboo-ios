@@ -1,5 +1,5 @@
 //
-//  MainModel.swift
+//  ListModel.swift
 //  Bamboo
 //
 //  Created by Mercen on 2023/02/19.
@@ -22,15 +22,15 @@ struct Post: Codable {
     let hashTags: [HashTag]
 }
 
-struct Posts: Codable {
+struct List: Codable {
     let list: [Post]
 }
 
-class MainModel: ObservableObject {
-    @Published var posts = [Post]()
+class ListModel: ObservableObject {
+    @Published var list = [Post]()
     func loadData() {
-        request("\(postAPI)/list", .get, Posts.self) { data in
-            self.posts = data.list
+        request("\(postAPI)/list", .get, List.self) { data in
+            self.list = data.list
         }
     }
 }

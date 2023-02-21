@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  ListView.swift
 //  Bamboo
 //
 //  Created by Mercen on 2022/11/29.
@@ -8,17 +8,19 @@
 import SwiftUI
 import LinkNavigator
 
-struct MainView: View {
+struct ListView: View {
     
+    @ObservedObject private var data = ListModel()
     let navigator: LinkNavigatorType?
     
     var body: some View {
         Text("test")
+            .onAppear(perform: data.loadData)
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(navigator: nil)
+        ListView(navigator: nil)
     }
 }

@@ -19,7 +19,7 @@ struct AppMain: App {
     var body: some Scene {
         WindowGroup {
             navigator
-                .launch(paths: ["main"], items: [:])
+                .launch(paths: ["list"], items: [:])
                 .onOpenURL { url in
                     
                 }
