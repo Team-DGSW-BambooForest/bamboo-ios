@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import LinkNavigator
 
 struct MainView: View {
+    
+    let navigator: LinkNavigatorType?
+    
     var body: some View {
         Text("test")
     }
@@ -15,6 +19,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(navigator: nil)
     }
 }

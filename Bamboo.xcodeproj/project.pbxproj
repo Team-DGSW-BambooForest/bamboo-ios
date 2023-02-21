@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		935560D52935912200CD66C2 /* BambooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935560D42935912200CD66C2 /* BambooApp.swift */; };
 		935560D72935912200CD66C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935560D62935912200CD66C2 /* MainView.swift */; };
 		935560D92935912300CD66C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935560D82935912300CD66C2 /* Assets.xcassets */; };
 		935560F929359C5200CD66C2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 935560F829359C5200CD66C2 /* Alamofire */; };
@@ -21,16 +20,21 @@
 		936459E029A0D4A900A15CCF /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459DF29A0D4A900A15CCF /* ViewExt.swift */; };
 		936459E229A0F28400A15CCF /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459E129A0F28400A15CCF /* Haptic.swift */; };
 		936459E429A0F2D500A15CCF /* ButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459E329A0F2D500A15CCF /* ButtonExt.swift */; };
+		939F7A9029A47FCB002AE93E /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A8F29A47FCB002AE93E /* AppDependency.swift */; };
+		939F7A9229A47FD9002AE93E /* AppRouterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9129A47FD9002AE93E /* AppRouterGroup.swift */; };
+		939F7A9429A47FF3002AE93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9329A47FF3002AE93E /* AppDelegate.swift */; };
+		939F7A9629A48006002AE93E /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9529A48006002AE93E /* AppMain.swift */; };
+		939F7A9829A480F5002AE93E /* MainRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9729A480F5002AE93E /* MainRouteBuilder.swift */; };
 		93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93CE181829A20A4D00A5C8A2 /* Kingfisher */; };
 		93CE181B29A2570E00A5C8A2 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181A29A2570E00A5C8A2 /* MainModel.swift */; };
 		93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181F29A258E000A5C8A2 /* LoginView.swift */; };
 		93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182129A258E800A5C8A2 /* LoginModel.swift */; };
 		93CE182529A25AD800A5C8A2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182429A25AD800A5C8A2 /* Constant.swift */; };
+		93D8A37529A37DBA007498F0 /* ProfileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		935560D12935912200CD66C2 /* Bamboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bamboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		935560D42935912200CD66C2 /* BambooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BambooApp.swift; sourceTree = "<group>"; };
 		935560D62935912200CD66C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		935560D82935912300CD66C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935560E22935913600CD66C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -42,11 +46,17 @@
 		936459DF29A0D4A900A15CCF /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 		936459E129A0F28400A15CCF /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		936459E329A0F2D500A15CCF /* ButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExt.swift; sourceTree = "<group>"; };
+		939F7A8F29A47FCB002AE93E /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		939F7A9129A47FD9002AE93E /* AppRouterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterGroup.swift; sourceTree = "<group>"; };
+		939F7A9329A47FF3002AE93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		939F7A9529A48006002AE93E /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
+		939F7A9729A480F5002AE93E /* MainRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouteBuilder.swift; sourceTree = "<group>"; };
 		93CE181629A20A0F00A5C8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		93CE181A29A2570E00A5C8A2 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		93CE181F29A258E000A5C8A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		93CE182129A258E800A5C8A2 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		93CE182429A25AD800A5C8A2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +112,7 @@
 		936459C529A0C80700A15CCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				935560D42935912200CD66C2 /* BambooApp.swift */,
+				939F7A8E29A47FB8002AE93E /* Navigator */,
 				93CE182329A2594200A5C8A2 /* Constants */,
 				93CE181D29A2588300A5C8A2 /* Components */,
 				93CE181C29A2587000A5C8A2 /* Extensions */,
@@ -124,14 +134,27 @@
 			children = (
 				93CE181329A207C900A5C8A2 /* Elements */,
 				935560D62935912200CD66C2 /* MainView.swift */,
+				939F7A9729A480F5002AE93E /* MainRouteBuilder.swift */,
 				93CE181A29A2570E00A5C8A2 /* MainModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
+		939F7A8E29A47FB8002AE93E /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				939F7A8F29A47FCB002AE93E /* AppDependency.swift */,
+				939F7A9129A47FD9002AE93E /* AppRouterGroup.swift */,
+				939F7A9329A47FF3002AE93E /* AppDelegate.swift */,
+				939F7A9529A48006002AE93E /* AppMain.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		93CE181329A207C900A5C8A2 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -258,19 +281,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */,
+				939F7A9229A47FD9002AE93E /* AppRouterGroup.swift in Sources */,
 				93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */,
 				936459CB29A0C88200A15CCF /* Radio.swift in Sources */,
 				936459C929A0C84A00A15CCF /* Button.swift in Sources */,
 				93CE182529A25AD800A5C8A2 /* Constant.swift in Sources */,
 				936459DA29A0CC7C00A15CCF /* TextExt.swift in Sources */,
+				939F7A9629A48006002AE93E /* AppMain.swift in Sources */,
 				936459E229A0F28400A15CCF /* Haptic.swift in Sources */,
 				936459CD29A0C89200A15CCF /* Navigation.swift in Sources */,
 				936459E429A0F2D500A15CCF /* ButtonExt.swift in Sources */,
 				936459E029A0D4A900A15CCF /* ViewExt.swift in Sources */,
 				93CE181B29A2570E00A5C8A2 /* MainModel.swift in Sources */,
+				939F7A9429A47FF3002AE93E /* AppDelegate.swift in Sources */,
+				939F7A9829A480F5002AE93E /* MainRouteBuilder.swift in Sources */,
 				936459DE29A0CE3600A15CCF /* Assets.swift in Sources */,
 				935560D72935912200CD66C2 /* MainView.swift in Sources */,
-				935560D52935912200CD66C2 /* BambooApp.swift in Sources */,
+				93D8A37529A37DBA007498F0 /* ProfileSelectionView.swift in Sources */,
+				939F7A9029A47FCB002AE93E /* AppDependency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
