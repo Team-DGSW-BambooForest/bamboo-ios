@@ -41,19 +41,23 @@ struct ListView: View {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 8) {
                     ForEach(data.list, id: \.self) { post in
-                        HStack {
-                            VStack(alignment: .leading, spacing: 12) {
-                                ProfileCardView(data: post)
-                                Text(post.content)
-                                    .setFont(14)
-                                    .foregroundColor(Bamboo.black)
+                        Button(action: {
+                            
+                        }) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 12) {
+                                    ProfileCardView(data: post)
+                                    Text(post.content)
+                                        .setFont(14)
+                                        .foregroundColor(Bamboo.black)
+                                }
+                                Spacer()
                             }
-                            Spacer()
+                            .padding(.vertical, 12)
+                            .padding(.horizontal, 14)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.white)
                         }
-                        .padding(.vertical, 12)
-                        .padding(.horizontal, 14)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
                     }
                 }
                 .padding(.top, 8)

@@ -11,6 +11,7 @@ struct AppRouterGroup {
     var routers: [RouteBuilder] {
         [
             ListRouteBuilder(),
+            PostRouteBuilder(),
             SearchRouteBuilder()
         ]
     }
