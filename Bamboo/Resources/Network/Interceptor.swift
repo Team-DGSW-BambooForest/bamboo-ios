@@ -18,7 +18,7 @@ final class Interceptor: RequestInterceptor {
     // MARK: - Request Adapter
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         guard urlRequest.url?.absoluteString.hasPrefix(baseAPI) == true,
-              let accessToken = getToken(.accessToken) else {
+              let accessToken = Token.get(.accessToken) else {
                   completion(.success(urlRequest))
                   return
               }
@@ -37,7 +37,7 @@ final class Interceptor: RequestInterceptor {
         }
         AF.request("\(userAPI)/token/refresh",
                    method: .post,
-                   parameters: ["refreshToken": "Bearer \(getToken(.refreshToken)!)"],
+                   parameters: ["refreshToken": "Bearer \(Token.get(.refreshToken)!)"],
                    encoding: JSONEncoding.default,
                    headers: ["Content-Type": "application/json"]
         ) { $0.timeoutInterval = 5 }
@@ -48,12 +48,12 @@ final class Interceptor: RequestInterceptor {
                 let decoder: JSONDecoder = JSONDecoder()
                 guard let value = response.value else { return }
                 guard let result = try? decoder.decode(InterceptorData.self, from: value) else { return }
-                saveToken(.accessToken, result.accessToken)
+                Token.save(.accessToken, result.accessToken)
                 completion(.retry)
             case .failure(let error):
                 print("통신 오류!\nCode:\(error._code), Message: \(error.errorDescription!)")
-                removeToken(.accessToken)
-                removeToken(.refreshToken)
+                Token.remove(.accessToken)
+                Token.remove(.refreshToken)
                 completion(.doNotRetryWithError(error))
                 exit(0)
             }

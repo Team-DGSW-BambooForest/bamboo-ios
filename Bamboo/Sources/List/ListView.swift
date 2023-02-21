@@ -16,7 +16,7 @@ struct ListView: View {
     var body: some View {
         VStack {
             ForEach(data.list, id: \.self) { post in
-                Text(post.content)
+                ProfileCardView(data: post)
             }
             Text("test")
         }

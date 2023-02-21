@@ -12,14 +12,16 @@ enum TokenType {
     case refreshToken
 }
 
-func getToken(_ tokenType: TokenType) -> String? {
-    return UserDefaults.standard.string(forKey: String(describing: tokenType))
-}
+class Token {
+    static func get(_ tokenType: TokenType) -> String? {
+        return UserDefaults.standard.string(forKey: String(describing: tokenType))
+    }
 
-func saveToken(_ tokenType: TokenType, _ value: String) {
-    UserDefaults.standard.set(value, forKey: String(describing: tokenType))
-}
+    static func save(_ tokenType: TokenType, _ value: String) {
+        UserDefaults.standard.set(value, forKey: String(describing: tokenType))
+    }
 
-func removeToken(_ tokenType: TokenType) {
-    UserDefaults.standard.removeObject(forKey: String(describing: tokenType))
+    static func remove(_ tokenType: TokenType) {
+        UserDefaults.standard.removeObject(forKey: String(describing: tokenType))
+    }
 }
