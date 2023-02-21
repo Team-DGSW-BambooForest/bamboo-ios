@@ -14,13 +14,19 @@ struct ListView: View {
     let navigator: LinkNavigatorType?
     
     var body: some View {
-        VStack {
-            ForEach(data.list, id: \.self) { post in
-                ProfileCardView(data: post)
+        ScrollView {
+            LazyVStack(alignment: .leading) {
+                ForEach(data.list, id: \.self) { post in
+                    VStack(alignment: .leading, spacing: 12) {
+                        ProfileCardView(data: post)
+                        Text(post.content)
+                            .setFont(14)
+                            .foregroundColor(Bamboo.black)
+                    }
+                }
             }
-            Text("test")
         }
-            .onAppear(perform: data.loadData)
+        .onAppear(perform: data.loadData)
     }
 }
 

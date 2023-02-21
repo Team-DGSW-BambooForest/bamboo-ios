@@ -26,10 +26,10 @@ struct ProfileCardView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(data.author)
                     .setFont(14, .medium)
-                    .foregroundColor(.black)
+                    .foregroundColor(Bamboo.black)
                 Text(formattedDate)
                     .setFont(12)
-                    .foregroundColor(.gray)
+                    .foregroundColor(Bamboo.gray)
             }
         }
     }
