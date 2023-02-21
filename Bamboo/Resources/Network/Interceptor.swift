@@ -12,8 +12,10 @@ struct InterceptorData: Codable {
     let accessToken: String
 }
 
-// MARK: - Alamofire Interceptor of DGSWchat
+// MARK: - Alamofire Interceptor
 final class Interceptor: RequestInterceptor {
+    
+    // MARK: - Request Adapter
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         guard urlRequest.url?.absoluteString.hasPrefix(baseAPI) == true,
               let accessToken = getToken(.accessToken) else {
@@ -23,8 +25,11 @@ final class Interceptor: RequestInterceptor {
         var urlRequest = urlRequest
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        urlRequest.timeoutInterval = 5
         completion(.success(urlRequest))
     }
+    
+    // MARK: - Token Refresher
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         guard let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 else {
             completion(.doNotRetryWithError(error))

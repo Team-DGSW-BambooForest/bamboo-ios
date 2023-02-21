@@ -30,6 +30,7 @@
 		939F7AA029A4B051002AE93E /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9F29A4B051002AE93E /* DateExt.swift */; };
 		939F7AA729A51667002AE93E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AA629A51667002AE93E /* Interceptor.swift */; };
 		939F7AA929A5168A002AE93E /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AA829A5168A002AE93E /* TokenManager.swift */; };
+		939F7AAB29A51F7E002AE93E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AAA29A51F7E002AE93E /* Request.swift */; };
 		93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93CE181829A20A4D00A5C8A2 /* Kingfisher */; };
 		93CE181B29A2570E00A5C8A2 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181A29A2570E00A5C8A2 /* MainModel.swift */; };
 		93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181F29A258E000A5C8A2 /* LoginView.swift */; };
@@ -61,6 +62,7 @@
 		939F7A9F29A4B051002AE93E /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		939F7AA629A51667002AE93E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		939F7AA829A5168A002AE93E /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		939F7AAA29A51F7E002AE93E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		93CE181629A20A0F00A5C8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		93CE181A29A2570E00A5C8A2 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		93CE181F29A258E000A5C8A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				93CE182429A25AD800A5C8A2 /* Constants.swift */,
+				939F7AAA29A51F7E002AE93E /* Request.swift */,
 				939F7AA629A51667002AE93E /* Interceptor.swift */,
 				939F7AA829A5168A002AE93E /* TokenManager.swift */,
 			);
@@ -307,6 +310,7 @@
 				939F7A9629A48006002AE93E /* AppMain.swift in Sources */,
 				936459E229A0F28400A15CCF /* Haptic.swift in Sources */,
 				936459CD29A0C89200A15CCF /* Navigation.swift in Sources */,
+				939F7AAB29A51F7E002AE93E /* Request.swift in Sources */,
 				936459E429A0F2D500A15CCF /* ButtonExt.swift in Sources */,
 				936459E029A0D4A900A15CCF /* ViewExt.swift in Sources */,
 				93CE181B29A2570E00A5C8A2 /* MainModel.swift in Sources */,

@@ -29,17 +29,8 @@ struct Posts: Codable {
 class MainModel: ObservableObject {
     @Published var posts = [Post]()
     func loadData() {
-        AF.request("https://yourapi.com/posts")
-            .responseData { response in
-            if let data = response.data {
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-                if let decodedData = try? decoder.decode(Posts.self, from: data) {
-                    DispatchQueue.main.async {
-                        self.posts = decodedData.list
-                    }
-                }
-            }
+        request("\(postAPI)/list", .get, Posts.self) { data in
+            self.posts = data.list
         }
     }
 }
