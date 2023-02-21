@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import LinkNavigator
 
 struct LoginView: View {
+    
+    let navigator: LinkNavigatorType?
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +19,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(navigator: nil)
     }
 }
