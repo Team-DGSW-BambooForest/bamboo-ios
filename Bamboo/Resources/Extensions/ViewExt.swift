@@ -16,3 +16,14 @@ extension View {
             .clipShape(RoundedRectangle(cornerRadius: radius))
     }
 }
+
+// MARK: - Function Extensions of UINavigationController
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+}

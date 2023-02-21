@@ -20,6 +20,7 @@ struct AppMain: App {
         WindowGroup {
             navigator
                 .launch(paths: ["list"], items: [:])
+                .ignoresSafeArea()
                 .onOpenURL { url in
                     
                 }

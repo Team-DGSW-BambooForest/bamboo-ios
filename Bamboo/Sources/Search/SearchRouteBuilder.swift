@@ -1,20 +1,20 @@
 //
-//  ListRouteBuilder.swift
+//  SearchRouteBuilder.swift
 //  Bamboo
 //
-//  Created by Mercen on 2023/02/21.
+//  Created by Mercen on 2023/02/22.
 //
 
 import LinkNavigator
 import SwiftUI
 
-struct ListRouteBuilder: RouteBuilder {
-    var matchPath: String { "list" }
+struct SearchRouteBuilder: RouteBuilder {
+    var matchPath: String { "search" }
     
     var build: (LinkNavigatorType, [String: String], DependencyType) -> MatchingViewController? {
         { navigator, items, dependency in
             return WrappingController(matchPath: matchPath) {
-                ListView(navigator: navigator)
+                SearchView(navigator: navigator)
                     .navigationBarHidden(true)
             }
         }

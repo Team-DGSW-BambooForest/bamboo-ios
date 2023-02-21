@@ -14,18 +14,53 @@ struct ListView: View {
     let navigator: LinkNavigatorType?
     
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading) {
-                ForEach(data.list, id: \.self) { post in
-                    VStack(alignment: .leading, spacing: 12) {
-                        ProfileCardView(data: post)
-                        Text(post.content)
-                            .setFont(14)
-                            .foregroundColor(Bamboo.black)
+        VStack(spacing: 0) {
+            
+            // MARK: - Top Bar
+            HStack(spacing: 15) {
+                ZStack(alignment: .leading) {
+                    Bamboo.logo
+                        .resizable()
+                        .frame(width: 28, height: 28)
+                    Text("대대숲")
+                        .setFont(20, .medium)
+                        .padding(.leading, 23.5)
+                }
+                Spacer()
+                Button(action: {
+                    navigator!.next(paths: ["search"], items: [:], isAnimated: true)
+                }) {
+                    Bamboo.search
+                }
+                .padding(.trailing, 5)
+            }
+            .padding(.top, 8)
+            .padding([.horizontal, .bottom], 14)
+            
+            // MARK: - List Items
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 8) {
+                    ForEach(data.list, id: \.self) { post in
+                        HStack {
+                            VStack(alignment: .leading, spacing: 12) {
+                                ProfileCardView(data: post)
+                                Text(post.content)
+                                    .setFont(14)
+                                    .foregroundColor(Bamboo.black)
+                            }
+                            Spacer()
+                        }
+                        .padding(.vertical, 12)
+                        .padding(.horizontal, 14)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
                     }
                 }
+                .padding(.top, 8)
             }
+            .background(Bamboo.makeColor("#F2F4F9"))
         }
+        .edgesIgnoringSafeArea(.bottom)
         .onAppear(perform: data.loadData)
     }
 }

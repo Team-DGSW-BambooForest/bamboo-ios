@@ -45,7 +45,7 @@ class Bamboo {
     static let gray       = Color("Gray")
     static let lightGray  = Color("Light Gray")
     
-    // MARK: - Images
+    // MARK: - Icons
     static let camera     = Image("Camera")
     static let clear      = Image("Clear")
     static let expand     = Image("Expand")
@@ -56,6 +56,9 @@ class Bamboo {
     static let search     = Image("Search")
     static let top        = Image("Top")
     static let unreadMail = Image("UnreadMail")
+    
+    // MARK: - Images
     static let anon       = Image("Anon")
+    static let logo       = Image("Logo")
 }
 
