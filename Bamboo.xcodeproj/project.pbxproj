@@ -10,7 +10,6 @@
 		935560D72935912200CD66C2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935560D62935912200CD66C2 /* ListView.swift */; };
 		935560D92935912300CD66C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935560D82935912300CD66C2 /* Assets.xcassets */; };
 		935560F929359C5200CD66C2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 935560F829359C5200CD66C2 /* Alamofire */; };
-		9355610129359CB500CD66C2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9355610029359CB500CD66C2 /* RealmSwift */; };
 		936459C929A0C84A00A15CCF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459C829A0C84A00A15CCF /* Button.swift */; };
 		936459CB29A0C88200A15CCF /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459CA29A0C88200A15CCF /* Radio.swift */; };
 		936459CD29A0C89200A15CCF /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936459CC29A0C89200A15CCF /* Navigation.swift */; };
@@ -36,6 +35,7 @@
 		939F7AB629A54953002AE93E /* SearchRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AB529A54953002AE93E /* SearchRouteBuilder.swift */; };
 		939F7AB929A5517D002AE93E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AB829A5517D002AE93E /* PostView.swift */; };
 		939F7ABB29A55183002AE93E /* PostRouterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7ABA29A55183002AE93E /* PostRouterBuilder.swift */; };
+		939F7ABD29A559D2002AE93E /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7ABC29A559D2002AE93E /* PostModel.swift */; };
 		93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93CE181829A20A4D00A5C8A2 /* Kingfisher */; };
 		93CE181B29A2570E00A5C8A2 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181A29A2570E00A5C8A2 /* ListModel.swift */; };
 		93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181F29A258E000A5C8A2 /* LoginView.swift */; };
@@ -73,6 +73,7 @@
 		939F7AB529A54953002AE93E /* SearchRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouteBuilder.swift; sourceTree = "<group>"; };
 		939F7AB829A5517D002AE93E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		939F7ABA29A55183002AE93E /* PostRouterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRouterBuilder.swift; sourceTree = "<group>"; };
+		939F7ABC29A559D2002AE93E /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		93CE181629A20A0F00A5C8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		93CE181A29A2570E00A5C8A2 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		93CE181F29A258E000A5C8A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9355610129359CB500CD66C2 /* RealmSwift in Frameworks */,
 				935560F929359C5200CD66C2 /* Alamofire in Frameworks */,
 				936459D029A0C8EF00A15CCF /* LinkNavigator in Frameworks */,
 				93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */,
@@ -221,6 +221,7 @@
 			children = (
 				939F7AB829A5517D002AE93E /* PostView.swift */,
 				939F7ABA29A55183002AE93E /* PostRouterBuilder.swift */,
+				939F7ABC29A559D2002AE93E /* PostModel.swift */,
 			);
 			path = PostView;
 			sourceTree = "<group>";
@@ -282,7 +283,6 @@
 			name = Bamboo;
 			packageProductDependencies = (
 				935560F829359C5200CD66C2 /* Alamofire */,
-				9355610029359CB500CD66C2 /* RealmSwift */,
 				936459CF29A0C8EF00A15CCF /* LinkNavigator */,
 				93CE181829A20A4D00A5C8A2 /* Kingfisher */,
 			);
@@ -316,7 +316,6 @@
 			mainGroup = 935560C82935912200CD66C2;
 			packageReferences = (
 				935560F729359C5200CD66C2 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				935560FF29359CB500CD66C2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */,
 				93CE181729A20A4D00A5C8A2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
@@ -347,6 +346,7 @@
 			files = (
 				93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */,
 				939F7A9A29A4884C002AE93E /* LoginRouteBuilder.swift in Sources */,
+				939F7ABD29A559D2002AE93E /* PostModel.swift in Sources */,
 				939F7ABB29A55183002AE93E /* PostRouterBuilder.swift in Sources */,
 				939F7A9229A47FD9002AE93E /* AppRouterGroup.swift in Sources */,
 				93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */,
@@ -593,14 +593,6 @@
 				kind = branch;
 			};
 		};
-		935560FF29359CB500CD66C2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/interactord/LinkNavigator.git";
@@ -624,11 +616,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 935560F729359C5200CD66C2 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		9355610029359CB500CD66C2 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 935560FF29359CB500CD66C2 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
 		};
 		936459CF29A0C8EF00A15CCF /* LinkNavigator */ = {
 			isa = XCSwiftPackageProductDependency;

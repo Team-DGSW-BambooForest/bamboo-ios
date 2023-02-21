@@ -10,10 +10,8 @@
 - Swift
 
 ### 🌱 사용 프레임워크
-- SwiftUI
-- Combine
+- SwiftUI & Combine
 - Alamofire
-- RealmSwift
 - KingFisher
 - LinkNavigator
 
