@@ -14,7 +14,12 @@ struct ListView: View {
     let navigator: LinkNavigatorType?
     
     var body: some View {
-        Text("test")
+        VStack {
+            ForEach(data.list, id: \.self) { post in
+                Text(post.content)
+            }
+            Text("test")
+        }
             .onAppear(perform: data.loadData)
     }
 }

@@ -8,21 +8,21 @@
 import SwiftUI
 import Alamofire
 
-struct HashTag: Codable {
+struct HashTag: Codable, Hashable {
     let tagId: Int
     let hashTag: String
 }
 
-struct Post: Codable {
+struct Post: Codable, Hashable {
     let postId: Int
     let author: String
     let profileImage: String
     let content: String
-    let createAt: Date
+    let createdAt: Date
     let hashTags: [HashTag]
 }
 
-struct List: Codable {
+struct List: Codable, Hashable {
     let list: [Post]
 }
 

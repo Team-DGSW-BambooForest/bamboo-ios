@@ -21,14 +21,23 @@ func request<T: Decodable>(_ url: String,
                interceptor: Interceptor()
     )
     .responseData { response in
-        if let data = response.data {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
-            if let decodedData = try? decoder.decode(T.self, from: data) {
-                DispatchQueue.main.async {
-                    completion(decodedData)
+        switch response.result {
+        case .success:
+            if let data = response.data {
+                let decoder = JSONDecoder()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                // print(String(decoding: response.data!, as: UTF8.self))
+                // let decodedData = try! decoder.decode(T.self, from: data)
+                if let decodedData = try? decoder.decode(T.self, from: data) {
+                    DispatchQueue.main.async {
+                        completion(decodedData)
+                    }
                 }
             }
+        case .failure(let error):
+            print(error)
         }
     }
 }
