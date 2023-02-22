@@ -16,7 +16,7 @@ func request<T: Decodable>(_ url: String,
                            completion: @escaping (T) -> Void) {
     AF.request(url,
                method: method,
-               parameters: nil,
+               parameters: params,
                encoding: method == .get ? URLEncoding.default : JSONEncoding.default,
                interceptor: Interceptor()
     )

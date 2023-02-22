@@ -26,11 +26,39 @@ struct List: Codable, Hashable {
     let list: [Post]
 }
 
+// MARK: - List Model
 class ListModel: ObservableObject {
+    
     @Published var list = [Post]()
+    @Published var page = 0
+    @Published var pageEnded = false
+    
+    // MARK: - Data Loader
     func loadData() {
-        request("\(postAPI)/list", .get, List.self) { data in
-            self.list = data.list
+        if !pageEnded {
+            request("\(postAPI)/list", .get,
+                    params: ["page": page], List.self)
+            { data in
+                
+                // MARK: - Checking Page Finished
+                if data.list.isEmpty {
+                    self.pageEnded = true
+                }
+                
+                // MARK: - Adding Data to List
+                else {
+                    withAnimation(.default) {
+                        self.list += data.list
+                    }
+                }
+            }
         }
+    }
+    
+    // MARK: - Data Refresher
+    func refreshData() {
+        self.page = 0
+        self.pageEnded = false
+        self.loadData()
     }
 }

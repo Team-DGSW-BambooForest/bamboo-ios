@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LinkNavigator
+import Refreshable
 
 struct ListView: View {
     
@@ -61,13 +62,19 @@ struct ListView: View {
                             .background(Color.white)
                         }
                     }
+                    Rectangle()
+                        .hidden()
+                        .onAppear {
+                            data.page += 1
+                            data.loadData()
+                        }
                 }
                 .padding(.top, 8)
             }
+            .refreshable { await data.refreshData() }
             .background(Bamboo.makeColor("#F2F4F9"))
         }
         .edgesIgnoringSafeArea(.bottom)
-        .onAppear(perform: data.loadData)
     }
 }
 

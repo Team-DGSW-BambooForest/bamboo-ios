@@ -60,6 +60,5 @@ class Bamboo {
     // MARK: - Images
     static let anon       = Image("Anon")
     static let logo       = Image("Logo")
-    static let user       = Image("User")
 }
 
