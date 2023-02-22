@@ -8,10 +8,10 @@
 import SwiftUI
 
 class PostModel: ObservableObject {
-    @Published var list = [Post]()
-    func loadData() {
-        request("\(postAPI)/list", .get, List.self) { data in
-            self.list = data.list
+    @Published var post: Post?
+    func loadData(_ id: String) {
+        request("\(postAPI)/\(id)", .get, Post.self) { data in
+            self.post = data
         }
     }
 }

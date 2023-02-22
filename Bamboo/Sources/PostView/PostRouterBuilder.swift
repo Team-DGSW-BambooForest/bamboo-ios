@@ -14,9 +14,15 @@ struct PostRouteBuilder: RouteBuilder {
     var build: (LinkNavigatorType, [String: String], DependencyType) -> MatchingViewController? {
         { navigator, items, dependency in
             return WrappingController(matchPath: matchPath) {
-                PostView(navigator: navigator)
+                PostView(postId: items.getValue(key: "postId") ?? "", navigator: navigator)
                     .navigationBarHidden(true)
             }
         }
     }
+}
+
+extension Dictionary where Key == String, Value == String {
+  fileprivate func getValue(key: String) -> String? {
+    first(where: { $0.key == key })?.value as? String
+  }
 }

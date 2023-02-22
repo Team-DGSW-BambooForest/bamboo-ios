@@ -42,7 +42,9 @@ struct ListView: View {
                 LazyVStack(alignment: .leading, spacing: 8) {
                     ForEach(data.list, id: \.self) { post in
                         Button(action: {
-                            
+                            navigator!.next(paths: ["post"],
+                                            items: ["postId": String(post.postId)],
+                                            isAnimated: true)
                         }) {
                             HStack {
                                 VStack(alignment: .leading, spacing: 12) {

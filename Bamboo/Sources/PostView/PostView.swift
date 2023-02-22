@@ -10,17 +10,18 @@ import LinkNavigator
 
 struct PostView: View {
     
+    @ObservedObject private var data = PostModel()
+    @State var postId: String
+    
     /// Variables
     let navigator: LinkNavigatorType?
     
     var body: some View {
-        Text("test")
-    }
-}
-
-struct PostView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostView(navigator: nil)
+        BambooNavigation {
+            ProfileCardView(data: data.post)
+        }
+        Text(data.post?.content ?? "")
+            .onAppear { data.loadData(postId) }
     }
 }
 
