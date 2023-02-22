@@ -26,12 +26,12 @@ extension ScrollView {
         if #available(iOS 15.0, *) {
             self
                 .refreshable {
-                    data.refreshData()
+                    await data.refreshData()
                 }
         } else {
             self
                 .refresher(style: .system) {
-                    data.refreshData()
+                    await data.refreshData()
                 }
         }
     }

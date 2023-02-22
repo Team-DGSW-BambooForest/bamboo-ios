@@ -27,7 +27,7 @@ struct List: Codable, Hashable {
 }
 
 // MARK: - List Model
-class ListModel: ObservableObject {
+@MainActor class ListModel: ObservableObject {
     
     @Published var list = [Post]()
     @Published var page = 1
@@ -60,14 +60,12 @@ class ListModel: ObservableObject {
     
     // MARK: - Data Refresher
     func refreshData() {
-        DispatchQueue.main.async {
-            self.page = 1
-            withAnimation(.default) {
-                self.list.removeAll()
-            }
-            self.pageEnded = false
+        self.page = 1
+        withAnimation(.default) {
+            self.list = [Post]()
         }
-        
+        self.pageEnded = false
+
         // MARK: - Data Reloader
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.loadData()
