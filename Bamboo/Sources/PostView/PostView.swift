@@ -17,11 +17,24 @@ struct PostView: View {
     let navigator: LinkNavigatorType?
     
     var body: some View {
-        BambooNavigation {
-            ProfileCardView(data: data.post)
+        VStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 14) {
+                BambooNavigation {
+                    ProfileCardView(data: data.post)
+                }
+                Text(data.post?.content ?? "")
+                    .setFont(14)
+                    .foregroundColor(Bamboo.black)
+            }
+            .padding(.bottom, 16)
+            .padding(.horizontal, 14)
+            Rectangle()
+                .fill(Bamboo.makeColor("#F2F2F2"))
+                .frame(height: 1)
+            ScrollView {
+                
+            }
         }
-        Text(data.post?.content ?? "")
-            .onAppear { data.loadData(postId) }
+        .onAppear { data.loadData(postId) }
     }
 }
-

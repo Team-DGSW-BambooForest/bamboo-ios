@@ -22,7 +22,7 @@ struct PostRouteBuilder: RouteBuilder {
 }
 
 extension Dictionary where Key == String, Value == String {
-  fileprivate func getValue(key: String) -> String? {
-    first(where: { $0.key == key })?.value as? String
-  }
+    fileprivate func getValue(key: String) -> String? {
+        first(where: { $0.key == key })?.value as? String
+    }
 }

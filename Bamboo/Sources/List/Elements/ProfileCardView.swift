@@ -20,9 +20,16 @@ struct ProfileCardView: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            BambooImage(data?.profileImage ?? "")
-                .frame(width: 40, height: 40)
-                .clipShape(Circle())
+            Group {
+                if let image = data?.profileImage {
+                    BambooImage(image)
+                } else {
+                    Bamboo.user
+                        .resizable()
+                }
+            }
+            .frame(width: 40, height: 40)
+            .clipShape(Circle())
             VStack(alignment: .leading, spacing: 3) {
                 Text(data?.author ?? "")
                     .setFont(14, .medium)
@@ -31,6 +38,7 @@ struct ProfileCardView: View {
                     .setFont(12)
                     .foregroundColor(Bamboo.gray)
             }
+            Spacer()
         }
     }
 }

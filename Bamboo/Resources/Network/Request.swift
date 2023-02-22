@@ -28,7 +28,7 @@ func request<T: Decodable>(_ url: String,
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
                 decoder.dateDecodingStrategy = .formatted(dateFormatter)
-                // print(String(decoding: response.data!, as: UTF8.self))
+                print(String(decoding: response.data!, as: UTF8.self))
                 // let decodedData = try! decoder.decode(T.self, from: data)
                 if let decodedData = try? decoder.decode(T.self, from: data) {
                     DispatchQueue.main.async {
