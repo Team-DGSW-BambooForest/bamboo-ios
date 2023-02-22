@@ -20,6 +20,8 @@ struct BambooImage: View {
     }
     
     var body: some View {
+        
+        // MARK: - Main Image
         KFImage(URL(string: url))
             .placeholder {
                 Bamboo.lightGray

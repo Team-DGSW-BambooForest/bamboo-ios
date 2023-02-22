@@ -7,7 +7,7 @@
 
 import SwiftUI
 import LinkNavigator
-import Refreshable
+import Refresher
 
 struct ListView: View {
     
@@ -42,6 +42,8 @@ struct ListView: View {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 8) {
                     ForEach(data.list, id: \.self) { post in
+                        
+                        // MARK: - List Item
                         Button(action: {
                             navigator!.next(paths: ["post"],
                                             items: ["postId": String(post.postId)],
@@ -64,14 +66,11 @@ struct ListView: View {
                     }
                     Rectangle()
                         .hidden()
-                        .onAppear {
-                            data.page += 1
-                            data.loadData()
-                        }
+                        .onAppear(perform: data.loadData)
                 }
                 .padding(.top, 8)
             }
-            .refreshable { await data.refreshData() }
+            .refreshIfPossible(data)
             .background(Bamboo.makeColor("#F2F4F9"))
         }
         .edgesIgnoringSafeArea(.bottom)

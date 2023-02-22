@@ -30,9 +30,9 @@ struct List: Codable, Hashable {
 class ListModel: ObservableObject {
     
     @Published var list = [Post]()
-    @Published var page = 0
+    @Published var page = 1
     @Published var pageEnded = false
-    
+
     // MARK: - Data Loader
     func loadData() {
         if !pageEnded {
@@ -47,8 +47,11 @@ class ListModel: ObservableObject {
                 
                 // MARK: - Adding Data to List
                 else {
-                    withAnimation(.default) {
-                        self.list += data.list
+                    self.page += 1
+                    DispatchQueue.main.async {
+                        withAnimation(.default) {
+                            self.list += data.list
+                        }
                     }
                 }
             }
@@ -57,8 +60,17 @@ class ListModel: ObservableObject {
     
     // MARK: - Data Refresher
     func refreshData() {
-        self.page = 0
-        self.pageEnded = false
-        self.loadData()
+        DispatchQueue.main.async {
+            self.page = 1
+            withAnimation(.default) {
+                self.list.removeAll()
+            }
+            self.pageEnded = false
+        }
+        
+        // MARK: - Data Reloader
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.loadData()
+        }
     }
 }
