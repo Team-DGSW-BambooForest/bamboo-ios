@@ -13,7 +13,6 @@ struct ProfileSelectionView: View {
     @AppStorage("isAnon", store: .standard) var isAnon: Bool = true
     
     var body: some View {
-        Color.black.opacity(0.2).ignoresSafeArea()
         VStack(spacing: 12) {
             
             Capsule()
@@ -39,6 +38,8 @@ struct ProfileSelectionView: View {
                 Spacer()
                 BambooRadio($isAnon)
             }
+            
+            Spacer()
         }
         .padding(.vertical, 12)
         .padding(.horizontal, 14)
