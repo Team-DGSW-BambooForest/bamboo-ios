@@ -36,13 +36,13 @@
 		939F7AB929A5517D002AE93E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AB829A5517D002AE93E /* PostView.swift */; };
 		939F7ABB29A55183002AE93E /* PostRouterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7ABA29A55183002AE93E /* PostRouterBuilder.swift */; };
 		939F7ABD29A559D2002AE93E /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7ABC29A559D2002AE93E /* PostModel.swift */; };
-		93B8D6E829A66D480056E2FD /* Refresher in Frameworks */ = {isa = PBXBuildFile; productRef = 93B8D6E729A66D480056E2FD /* Refresher */; };
 		93B8D6ED29A7C66F0056E2FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8D6EC29A7C66F0056E2FD /* ProfileView.swift */; };
 		93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93CE181829A20A4D00A5C8A2 /* Kingfisher */; };
 		93CE181B29A2570E00A5C8A2 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181A29A2570E00A5C8A2 /* ListModel.swift */; };
 		93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE181F29A258E000A5C8A2 /* LoginView.swift */; };
 		93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182129A258E800A5C8A2 /* LoginModel.swift */; };
 		93CE182529A25AD800A5C8A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182429A25AD800A5C8A2 /* Constants.swift */; };
+		93D742AD29A9CC3100CEBF47 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 93D742AC29A9CC3100CEBF47 /* PartialSheet */; };
 		93D8A37529A37DBA007498F0 /* ProfileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,8 +92,8 @@
 			files = (
 				935560F929359C5200CD66C2 /* Alamofire in Frameworks */,
 				936459D029A0C8EF00A15CCF /* LinkNavigator in Frameworks */,
+				93D742AD29A9CC3100CEBF47 /* PartialSheet in Frameworks */,
 				93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */,
-				93B8D6E829A66D480056E2FD /* Refresher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +290,7 @@
 				935560F829359C5200CD66C2 /* Alamofire */,
 				936459CF29A0C8EF00A15CCF /* LinkNavigator */,
 				93CE181829A20A4D00A5C8A2 /* Kingfisher */,
-				93B8D6E729A66D480056E2FD /* Refresher */,
+				93D742AC29A9CC3100CEBF47 /* PartialSheet */,
 			);
 			productName = Bamboo;
 			productReference = 935560D12935912200CD66C2 /* Bamboo.app */;
@@ -324,7 +324,7 @@
 				935560F729359C5200CD66C2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */,
 				93CE181729A20A4D00A5C8A2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				93B8D6E629A66D480056E2FD /* XCRemoteSwiftPackageReference "SwiftUI-Refresher" */,
+				93D742AB29A9CC3100CEBF47 /* XCRemoteSwiftPackageReference "PartialSheet" */,
 			);
 			productRefGroup = 935560D22935912200CD66C2 /* Products */;
 			projectDirPath = "";
@@ -439,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -493,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -522,7 +522,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,7 +555,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,20 +609,20 @@
 				minimumVersion = 0.5.4;
 			};
 		};
-		93B8D6E629A66D480056E2FD /* XCRemoteSwiftPackageReference "SwiftUI-Refresher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gh123man/SwiftUI-Refresher";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		93CE181729A20A4D00A5C8A2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				branch = master;
 				kind = branch;
+			};
+		};
+		93D742AB29A9CC3100CEBF47 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -638,15 +638,15 @@
 			package = 936459CE29A0C8EF00A15CCF /* XCRemoteSwiftPackageReference "LinkNavigator" */;
 			productName = LinkNavigator;
 		};
-		93B8D6E729A66D480056E2FD /* Refresher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 93B8D6E629A66D480056E2FD /* XCRemoteSwiftPackageReference "SwiftUI-Refresher" */;
-			productName = Refresher;
-		};
 		93CE181829A20A4D00A5C8A2 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 93CE181729A20A4D00A5C8A2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		93D742AC29A9CC3100CEBF47 /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93D742AB29A9CC3100CEBF47 /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

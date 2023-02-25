@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LinkNavigator
+import PartialSheet
 
 @main
 struct AppMain: App {
@@ -21,6 +22,7 @@ struct AppMain: App {
             navigator
                 .launch(paths: ["list"], items: [:])
                 .ignoresSafeArea()
+                .attachPartialSheetToRoot()
                 .onOpenURL { url in
                     
                 }

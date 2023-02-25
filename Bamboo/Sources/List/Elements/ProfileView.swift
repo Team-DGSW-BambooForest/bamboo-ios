@@ -6,19 +6,16 @@
 //
 
 import SwiftUI
-
-class ProfileModel: ObservableObject {
-    @Published var isPresented: Bool = false
-}
+import PartialSheet
 
 struct ProfileView: View {
-    
-    @ObservedObject private var state = ProfileModel()
+
+    @State private var isPresented: Bool = false
     let size: CGFloat
     
     var body: some View {
         Button(action: {
-            state.isPresented = true
+            isPresented.toggle()
         }) {
             ZStack(alignment: .bottomTrailing) {
                 Bamboo.anon
@@ -34,5 +31,8 @@ struct ProfileView: View {
             }
         }
         .scaleButton()
+        .partialSheet(isPresented: $isPresented, iPhoneStyle: PSIphoneStyle.init(background: .solid(.white), handleBarStyle: .solid(<#Color#>), cover: .enabled(.black.opacity(0.2)), cornerRadius: 15)) {
+            ProfileSelectionView()
+        }
     }
 }

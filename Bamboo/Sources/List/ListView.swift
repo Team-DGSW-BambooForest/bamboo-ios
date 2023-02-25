@@ -12,6 +12,7 @@ import Refresher
 struct ListView: View {
     
     @ObservedObject private var data = ListModel()
+    @State var selection: Bool = false
     let navigator: LinkNavigatorType?
     
     var body: some View {
@@ -72,7 +73,9 @@ struct ListView: View {
                 }
                 .padding(.top, 8)
             }
-            .refreshIfPossible(data)
+            .refreshable {
+                data.refreshData()
+            }
             .background(Bamboo.makeColor("#F2F4F9"))
         }
         .edgesIgnoringSafeArea(.bottom)

@@ -18,25 +18,6 @@ extension View {
     }
 }
 
-// MARK: - ScrollView Extension of Bamboo
-extension ScrollView {
-    
-    // MARK: - iOS 14 Refresh Function
-    @ViewBuilder func refreshIfPossible(_ data: ListModel) -> some View {
-        if #available(iOS 15.0, *) {
-            self
-                .refreshable {
-                    await data.refreshData()
-                }
-        } else {
-            self
-                .refresher(style: .system) {
-                    await data.refreshData()
-                }
-        }
-    }
-}
-
 // MARK: - Function Extensions of UINavigationController
 extension UINavigationController: UIGestureRecognizerDelegate {
     override open func viewDidLoad() {
