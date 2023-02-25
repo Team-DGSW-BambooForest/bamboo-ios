@@ -8,8 +8,10 @@
 import SwiftUI
 import PartialSheet
 
+// MARK: - Profile View
 struct ProfileView: View {
 
+    /// Variables
     @State private var isPresented: Bool = false
     let size: CGFloat
     
@@ -31,7 +33,12 @@ struct ProfileView: View {
             }
         }
         .scaleButton()
-        .partialSheet(isPresented: $isPresented, iPhoneStyle: PSIphoneStyle.init(background: .solid(.white), handleBarStyle: .solid(<#Color#>), cover: .enabled(.black.opacity(0.2)), cornerRadius: 15)) {
+        .partialSheet(isPresented: $isPresented,
+                      iPhoneStyle: PSIphoneStyle.init(background: .solid(.white),
+                                                      handleBarStyle: .none,
+                                                      cover: .enabled(.black.opacity(0.2)),
+                                                      cornerRadius: 15))
+        {
             ProfileSelectionView()
         }
     }

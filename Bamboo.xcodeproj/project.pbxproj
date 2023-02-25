@@ -152,7 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				936459D329A0CA3D00A15CCF /* List */,
-				939F7AB729A55173002AE93E /* PostView */,
+				93D742AE29A9ECC200CEBF47 /* Profile */,
+				939F7AB729A55173002AE93E /* Post */,
 				939F7AB229A54943002AE93E /* Search */,
 				93CE181E29A258C600A5C8A2 /* Login */,
 			);
@@ -162,7 +163,6 @@
 		936459D329A0CA3D00A15CCF /* List */ = {
 			isa = PBXGroup;
 			children = (
-				93CE181329A207C900A5C8A2 /* Elements */,
 				935560D62935912200CD66C2 /* ListView.swift */,
 				939F7A9729A480F5002AE93E /* ListRouteBuilder.swift */,
 				93CE181A29A2570E00A5C8A2 /* ListModel.swift */,
@@ -220,24 +220,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		939F7AB729A55173002AE93E /* PostView */ = {
+		939F7AB729A55173002AE93E /* Post */ = {
 			isa = PBXGroup;
 			children = (
 				939F7AB829A5517D002AE93E /* PostView.swift */,
 				939F7ABA29A55183002AE93E /* PostRouterBuilder.swift */,
 				939F7ABC29A559D2002AE93E /* PostModel.swift */,
 			);
-			path = PostView;
-			sourceTree = "<group>";
-		};
-		93CE181329A207C900A5C8A2 /* Elements */ = {
-			isa = PBXGroup;
-			children = (
-				93B8D6EC29A7C66F0056E2FD /* ProfileView.swift */,
-				93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */,
-				939F7A9B29A4AA14002AE93E /* ProfileCardView.swift */,
-			);
-			path = Elements;
+			path = Post;
 			sourceTree = "<group>";
 		};
 		93CE181C29A2587000A5C8A2 /* Extensions */ = {
@@ -268,6 +258,16 @@
 				93CE182129A258E800A5C8A2 /* LoginModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		93D742AE29A9ECC200CEBF47 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				93B8D6EC29A7C66F0056E2FD /* ProfileView.swift */,
+				93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */,
+				939F7A9B29A4AA14002AE93E /* ProfileCardView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
