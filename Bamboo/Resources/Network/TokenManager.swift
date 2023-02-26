@@ -12,6 +12,7 @@ enum TokenType {
     case refreshToken
 }
 
+// MARK: - 토큰 매니저
 class Token {
     static func get(_ tokenType: TokenType) -> String? {
         return UserDefaults.standard.string(forKey: String(describing: tokenType))

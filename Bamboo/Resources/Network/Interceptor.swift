@@ -12,10 +12,10 @@ struct InterceptorData: Codable {
     let accessToken: String
 }
 
-// MARK: - Alamofire Interceptor
+// MARK: - Alamofire 인터셉터
 final class Interceptor: RequestInterceptor {
     
-    // MARK: - Request Adapter
+    // MARK: - 요청 Adapter
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         guard urlRequest.url?.absoluteString.hasPrefix(baseAPI) == true,
               let accessToken = Token.get(.accessToken) else {
@@ -29,7 +29,7 @@ final class Interceptor: RequestInterceptor {
         completion(.success(urlRequest))
     }
     
-    // MARK: - Token Refresher
+    // MARK: - 토큰 리프레쉬
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         guard let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 else {
             completion(.doNotRetryWithError(error))

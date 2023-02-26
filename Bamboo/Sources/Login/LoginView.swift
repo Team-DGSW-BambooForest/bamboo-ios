@@ -8,6 +8,7 @@
 import SwiftUI
 import LinkNavigator
 
+// MARK: - 로그인 뷰
 struct LoginView: View {
     
     let navigator: LinkNavigatorType?

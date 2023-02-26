@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-// MARK: - Button Style
+// MARK: - 버튼 스타일
 extension Button {
     
-    // MARK: - Scale Animation for Button
+    // MARK: - 버튼에 애니메이션 적용
     @ViewBuilder func scaleButton() -> some View {
         self
             .buttonStyle(ScaleButtonStyle())
     }
 }
 
-// MARK: - Scale Style for Button
+// MARK: - 버튼 애니메이션 스타일
 struct ScaleButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label

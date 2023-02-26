@@ -3,17 +3,15 @@
 ### ☘️ 개발 원칙
 - MV State 아키텍처
 - SPM 사용
-- 빌드 타깃 iOS 14
+- 빌드 타깃 iOS 15
 - iPadOS 대응
 
 ### 🌿 사용 언어
 - Swift
 
 ### 🌱 사용 프레임워크
-- SwiftUI
-- Combine
+- SwiftUI & Combine
 - Alamofire
-- RealmSwift
 - KingFisher
 - LinkNavigator
 

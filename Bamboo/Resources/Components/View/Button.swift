@@ -7,16 +7,14 @@
 
 import SwiftUI
 
-// MARK: - Large Button of Bamboo
+// MARK: - 커스텀 버튼
 struct BambooButton: View {
-    
-    /// Variables
+ 
     let action: () -> Void
     let text: String
     var disabled: Bool = false
     var isSecondary: Bool = false
-    
-    /// Initializer
+
     init(action: @escaping () -> Void,
          text: String,
          disabled: Bool = false,
@@ -30,7 +28,7 @@ struct BambooButton: View {
     
     var body: some View {
         
-        // MARK: - Main Button
+        // MARK: - 버튼
         Button(action: action) {
             Text(text)
                 .setFont(14)
@@ -44,7 +42,6 @@ struct BambooButton: View {
                             : !disabled
                             ? AnyView(Bamboo.primary) /// Primary Color
                             : AnyView(Bamboo.gray))   /// Disabled Color
-                /// Makes Stroke if Secondary Button
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
                         .strokeBorder(Bamboo.lightGray,
@@ -57,10 +54,10 @@ struct BambooButton: View {
     }
 }
 
-// MARK: - Function Extensions of BambooButton
+// MARK: - 확장
 extension BambooButton {
     
-    // MARK: - Disabled Function
+    // MARK: - 버튼 비활성화
     func disabled(_ disabled: Bool) -> BambooButton {
         BambooButton(action: self.action,
                      text: self.text,
@@ -68,7 +65,7 @@ extension BambooButton {
                      isSecondary: self.isSecondary)
     }
     
-    // MARK: - Secondary Button Function
+    // MARK: - 취소 버튼 스타일
     func secondary() -> BambooButton {
         BambooButton(action: self.action,
                      text: self.text,

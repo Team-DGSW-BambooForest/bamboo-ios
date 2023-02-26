@@ -5,8 +5,8 @@
 //  Created by Mercen on 2023/02/21.
 //
 
-import LinkNavigator
 import SwiftUI
+import LinkNavigator
 
 struct LoginRouteBuilder: RouteBuilder {
     var matchPath: String { "login" }

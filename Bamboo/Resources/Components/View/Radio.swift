@@ -7,28 +7,29 @@
 
 import SwiftUI
 
-// MARK: - Radio Button of Bamboo
+// MARK: - 라디오 버튼
 struct BambooRadio: View {
-    
-    /// Bindings
+
     @Binding var state: Bool
+    let action: () -> Void
     
-    /// Initializer
-    init(_ state: Binding<Bool>) {
+    init(action: @escaping () -> Void,
+         _ state: Binding<Bool>) {
+        self.action = action
         self._state = state
     }
     
     var body: some View {
         
-        // MARK: - Main Button
+        // MARK: - 버튼
         Button(action: {
             withAnimation(.default) {
-                state.toggle()
+                action()
             }
         }) {
             ZStack {
                 
-                // MARK: - Outline
+                // MARK: - 외곽선
                 Circle()
                     .strokeBorder(state
                                   ? Bamboo.primary
@@ -39,7 +40,7 @@ struct BambooRadio: View {
                                   lineWidth: state ? 2 : 1)
                     .frame(width: 18, height: 18)
                 
-                // MARK: - Inner Circle
+                // MARK: - 내부 원
                 if state {
                     Circle()
                         .fill(Bamboo.primary)

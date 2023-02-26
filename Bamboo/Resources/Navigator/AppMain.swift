@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LinkNavigator
+import PartialSheet
 
 @main
 struct AppMain: App {
@@ -19,7 +20,10 @@ struct AppMain: App {
     var body: some Scene {
         WindowGroup {
             navigator
-                .launch(paths: ["list"], items: [:])
+                .launch(paths: ["splash"], items: [:])
+                //.launch(paths: ["login"], items: [:])
+                .ignoresSafeArea()
+                .attachPartialSheetToRoot()
                 .onOpenURL { url in
                     
                 }
