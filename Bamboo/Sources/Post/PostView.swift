@@ -38,7 +38,7 @@ struct PostView: View {
                 TextField("댓글을 입력하세요", text: $data.commentInput)
                     .font(.system(size: 14, weight: .regular))
                 Button(action: {
-                    
+                    data.sendComment(postId)
                 }) {
                     Bamboo.send
                         .renderingMode(.template)

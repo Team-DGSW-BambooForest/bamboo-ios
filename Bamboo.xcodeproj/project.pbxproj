@@ -26,7 +26,6 @@
 		939F7A9829A480F5002AE93E /* ListRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9729A480F5002AE93E /* ListRouteBuilder.swift */; };
 		939F7A9A29A4884C002AE93E /* LoginRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9929A4884B002AE93E /* LoginRouteBuilder.swift */; };
 		939F7A9C29A4AA14002AE93E /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9B29A4AA14002AE93E /* ProfileCardView.swift */; };
-		939F7AA029A4B051002AE93E /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7A9F29A4B051002AE93E /* DateExt.swift */; };
 		939F7AA729A51667002AE93E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AA629A51667002AE93E /* Interceptor.swift */; };
 		939F7AA929A5168A002AE93E /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AA829A5168A002AE93E /* TokenManager.swift */; };
 		939F7AAB29A51F7E002AE93E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AAA29A51F7E002AE93E /* Request.swift */; };
@@ -43,6 +42,8 @@
 		93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182129A258E800A5C8A2 /* LoginModel.swift */; };
 		93CE182529A25AD800A5C8A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE182429A25AD800A5C8A2 /* Constants.swift */; };
 		93D742AD29A9CC3100CEBF47 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 93D742AC29A9CC3100CEBF47 /* PartialSheet */; };
+		93D742B529AB3E2900CEBF47 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D742B429AB3E2900CEBF47 /* CommentView.swift */; };
+		93D742B729AB3E2F00CEBF47 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D742B629AB3E2F00CEBF47 /* CommentModel.swift */; };
 		93D8A37529A37DBA007498F0 /* ProfileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +67,6 @@
 		939F7A9729A480F5002AE93E /* ListRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouteBuilder.swift; sourceTree = "<group>"; };
 		939F7A9929A4884B002AE93E /* LoginRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouteBuilder.swift; sourceTree = "<group>"; };
 		939F7A9B29A4AA14002AE93E /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
-		939F7A9F29A4B051002AE93E /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		939F7AA629A51667002AE93E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		939F7AA829A5168A002AE93E /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		939F7AAA29A51F7E002AE93E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -82,6 +82,8 @@
 		93CE181F29A258E000A5C8A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		93CE182129A258E800A5C8A2 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		93CE182429A25AD800A5C8A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		93D742B429AB3E2900CEBF47 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		93D742B629AB3E2F00CEBF47 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				936459D329A0CA3D00A15CCF /* List */,
 				93D742AE29A9ECC200CEBF47 /* Profile */,
 				939F7AB729A55173002AE93E /* Post */,
+				93D742B129AB3E1400CEBF47 /* Comment */,
 				939F7AB229A54943002AE93E /* Search */,
 				93CE181E29A258C600A5C8A2 /* Login */,
 			);
@@ -236,7 +239,6 @@
 				936459E329A0F2D500A15CCF /* ButtonExt.swift */,
 				936459D929A0CC7C00A15CCF /* TextExt.swift */,
 				936459DF29A0D4A900A15CCF /* ViewExt.swift */,
-				939F7A9F29A4B051002AE93E /* DateExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +270,15 @@
 				939F7A9B29A4AA14002AE93E /* ProfileCardView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		93D742B129AB3E1400CEBF47 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				93D742B429AB3E2900CEBF47 /* CommentView.swift */,
+				93D742B629AB3E2F00CEBF47 /* CommentModel.swift */,
+			);
+			path = Comment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +371,7 @@
 				936459CB29A0C88200A15CCF /* Radio.swift in Sources */,
 				939F7AA729A51667002AE93E /* Interceptor.swift in Sources */,
 				936459C929A0C84A00A15CCF /* Button.swift in Sources */,
+				93D742B529AB3E2900CEBF47 /* CommentView.swift in Sources */,
 				93CE182529A25AD800A5C8A2 /* Constants.swift in Sources */,
 				936459DA29A0CC7C00A15CCF /* TextExt.swift in Sources */,
 				939F7A9629A48006002AE93E /* AppMain.swift in Sources */,
@@ -377,7 +389,7 @@
 				939F7AB429A5494D002AE93E /* SearchView.swift in Sources */,
 				93B8D6ED29A7C66F0056E2FD /* ProfileView.swift in Sources */,
 				939F7AB129A528D8002AE93E /* Image.swift in Sources */,
-				939F7AA029A4B051002AE93E /* DateExt.swift in Sources */,
+				93D742B729AB3E2F00CEBF47 /* CommentModel.swift in Sources */,
 				939F7AA929A5168A002AE93E /* TokenManager.swift in Sources */,
 				936459DE29A0CE3600A15CCF /* Assets.swift in Sources */,
 				935560D72935912200CD66C2 /* ListView.swift in Sources */,

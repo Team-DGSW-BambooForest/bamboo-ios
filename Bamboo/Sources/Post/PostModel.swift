@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct Comment: Codable, Hashable {
-    let commentId: Int
-    let profileImage: String
-    let writer: String
-    let content: String
-    let diffTime: String
-}
-
-struct FullComment: Codable, Hashable {
-    let comment: Comment
-    let nested: [Comment]
-}
-
 class PostModel: ObservableObject {
     @Published var post: Post?
     @Published var comments = [FullComment]()
@@ -40,8 +27,11 @@ class PostModel: ObservableObject {
             print(self.comments)
         }
     }
-    func sendComment() {
-        Requests.post("\(commentAPI)/create",
-                      .post, params: [:])
+    func sendComment(_ id: String) {
+        if !self.commentInput.isEmpty {
+            Requests.post("\(commentAPI)/create",
+                          params: ["postId": id, "parentCommnetId": 0, "content": commentInput])
+            commentInput = String()
+        }
     }
 }

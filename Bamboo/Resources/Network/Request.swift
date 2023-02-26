@@ -20,6 +20,7 @@ class Requests {
                    encoding: URLEncoding.default,
                    interceptor: Interceptor()
         )
+        .validate()
         .responseData { response in
             switch response.result {
             case .success:
@@ -50,12 +51,13 @@ class Requests {
                    encoding: JSONEncoding.default,
                    interceptor: Interceptor()
         )
+        .validate()
         .responseData { response in
             switch response.result {
             case .success:
-                print("success")
+                print(String(decoding: response.data!, as: UTF8.self))
             case .failure(let error):
-                print(error)
+                print("에?러: \(String(describing: error.errorDescription))")
             }
         }
     }

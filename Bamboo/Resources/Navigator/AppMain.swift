@@ -21,6 +21,7 @@ struct AppMain: App {
         WindowGroup {
             navigator
                 .launch(paths: ["list"], items: [:])
+                //.launch(paths: ["login"], items: [:])
                 .ignoresSafeArea()
                 .attachPartialSheetToRoot()
                 .onOpenURL { url in
