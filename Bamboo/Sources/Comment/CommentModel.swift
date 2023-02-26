@@ -8,15 +8,14 @@
 import Foundation
 
 struct Comment: Codable, Hashable {
-    let commentId: Int
+    let id: Int
     let profileImage: String
     let writer: String
     let content: String
-    let diffTime: String
+    let createdAt: String
 }
 
-struct FullComment: Codable, Hashable {
+struct Comments: Codable, Hashable {
     let comment: Comment
-    let nested: [Comment]
+    let reply: [Comment]
 }
-

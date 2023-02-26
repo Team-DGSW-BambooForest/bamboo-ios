@@ -25,7 +25,7 @@ struct Post: Codable, Hashable {
 class PostModel: ObservableObject {
     
     @Published var post: Post?
-    @Published var comments = [FullComment]()
+    @Published var comments = [Comments]()
     @Published var commentInput = String()
     
     // MARK: - 글 로드
@@ -36,23 +36,9 @@ class PostModel: ObservableObject {
         }
         
         // MARK: - 댓글 로드
-        Requests.get("\(commentAPI)/\(id)",
-                     [Comment].self) { datas in
-            datas.forEach { comment in
-                
-                // MARK: - 대댓글 로드
-                Requests.get("\(commentAPI)/nested/\(comment.commentId)",
-                             [Comment].self) { nested in
-                    var temp = self.comments
-                    temp.append(FullComment(comment: comment, nested: nested))
-                    temp = temp.sorted {
-                        $0.comment.commentId < $1.comment.commentId
-                    }
-                    withAnimation(.default) {
-                        self.comments = temp
-                    }
-                }
-            }
+        Requests.get("\(commentAPI)/comments/\(id)",
+                     [Comments].self) { data in
+            self.comments = data
         }
     }
     
