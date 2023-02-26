@@ -54,7 +54,7 @@ class PostModel: ObservableObject {
     func sendComment(_ id: String) {
         if !self.commentInput.isEmpty {
             Requests.post("\(commentAPI)/create",
-                          params: ["postId": id, "parentCommnetId": 0, "content": commentInput])
+                          params: ["postId": id, "parentCommentId": 0, "content": commentInput])
             commentInput = String()
         }
     }

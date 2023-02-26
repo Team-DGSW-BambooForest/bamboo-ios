@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Refresher
 
 // MARK: - 뷰 확장
 extension View {

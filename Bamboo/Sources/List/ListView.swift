@@ -7,7 +7,6 @@
 
 import SwiftUI
 import LinkNavigator
-import Refresher
 
 // MARK: - 리스트 뷰
 struct ListView: View {
