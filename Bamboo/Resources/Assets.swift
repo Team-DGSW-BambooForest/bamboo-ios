@@ -55,6 +55,7 @@ class Bamboo {
     static let more       = Image("More")
     static let plus       = Image("Plus")
     static let search     = Image("Search")
+    static let send       = Image("Send")
     static let top        = Image("Top")
     static let unreadMail = Image("UnreadMail")
     

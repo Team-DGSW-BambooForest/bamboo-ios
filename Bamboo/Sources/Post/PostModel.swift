@@ -23,6 +23,7 @@ struct FullComment: Codable, Hashable {
 class PostModel: ObservableObject {
     @Published var post: Post?
     @Published var comments = [FullComment]()
+    @Published var commentInput = String()
     func loadData(_ id: String) {
         request("\(postAPI)/\(id)", .get, Post.self) { data in
             self.post = data

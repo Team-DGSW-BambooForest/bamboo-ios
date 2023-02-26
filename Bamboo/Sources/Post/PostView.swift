@@ -34,6 +34,30 @@ struct PostView: View {
             ScrollView {
                 
             }
+            HStack(spacing: 0) {
+                TextField("댓글을 입력하세요", text: $data.commentInput)
+                    .font(.system(size: 14, weight: .regular))
+                Button(action: {
+                    
+                }) {
+                    Bamboo.send
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(width: 28, height: 28)
+                        .foregroundColor(Bamboo.makeColor("#AFAFAF"))
+                }
+                .scaleButton()
+            }
+            .padding(.vertical, 8)
+            .padding(.horizontal, 14)
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .strokeBorder(Bamboo.makeColor("#E6E6E6"))
+            )
+            .padding(.horizontal, 14)
+            .padding(.top, 21)
+            .padding(.bottom, 19)
+            .background(Color.white)
         }
         .onAppear { data.loadData(postId) }
     }
