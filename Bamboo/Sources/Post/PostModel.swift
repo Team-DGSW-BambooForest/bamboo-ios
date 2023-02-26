@@ -43,10 +43,16 @@ class PostModel: ObservableObject {
                 // MARK: - 대댓글 로드
                 Requests.get("\(commentAPI)/nested/\(comment.commentId)",
                              [Comment].self) { nested in
-                    self.comments.append(FullComment(comment: comment, nested: nested))
+                    var temp = self.comments
+                    temp.append(FullComment(comment: comment, nested: nested))
+                    temp = temp.sorted {
+                        $0.comment.commentId < $1.comment.commentId
+                    }
+                    withAnimation(.default) {
+                        self.comments = temp
+                    }
                 }
             }
-            print(self.comments)
         }
     }
     

@@ -35,7 +35,10 @@ struct PostView: View {
             
             // MARK: - 댓글 목록
             ScrollView {
-                
+                ForEach(data.comments, id: \.self) { comment in
+                    Text(comment.comment.content)
+                        .transition(.opacity)
+                }
             }
             
             // MARK: - 댓글 입력 창
