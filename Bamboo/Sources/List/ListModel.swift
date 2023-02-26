@@ -32,12 +32,12 @@ struct List: Codable, Hashable {
     @Published var list = [Post]()
     @Published var page = 1
     @Published var pageEnded = false
-
+    
     // MARK: - Data Loader
     func loadData() {
         if !pageEnded {
-            request("\(postAPI)/list", .get,
-                    params: ["page": page], List.self)
+            Requests.get("\(postAPI)/list",
+                         params: ["page": page], List.self)
             { data in
                 
                 // MARK: - Checking Page Finished
@@ -65,7 +65,7 @@ struct List: Codable, Hashable {
             self.list = [Post]()
         }
         self.pageEnded = false
-
+        
         // MARK: - Data Reloader
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.loadData()
