@@ -8,6 +8,7 @@
 import SwiftUI
 import LinkNavigator
 
+// MARK: - 검색 뷰
 struct SearchView: View {
     
     let navigator: LinkNavigatorType?

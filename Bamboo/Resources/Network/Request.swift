@@ -8,8 +8,10 @@
 import Foundation
 import Alamofire
 
-// MARK: - Request and Returns Data
+// MARK: - 요청과 응답 처리
 class Requests {
+    
+    // MARK: - Get 요청
     static func get<T: Decodable>(_ url: String,
                            params: [String: Any]? = nil,
                            _ model: T.Type,
@@ -42,6 +44,8 @@ class Requests {
             }
         }
     }
+    
+    // MARK: - Post 요청
     static func post(_ url: String,
                      _ method: HTTPMethod? = nil,
                      params: [String: Any]? = nil) {

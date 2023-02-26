@@ -9,24 +9,29 @@ import SwiftUI
 import LinkNavigator
 import PartialSheet
 
-// MARK: - Profile View
+// MARK: - 프로필 뷰
 struct ProfileView: View {
 
-    /// Variables
     @State private var isPresented: Bool = false
     let size: CGFloat
     let navigator: LinkNavigatorType?
     
     var body: some View {
+        
+        // MARK: - 버튼
         Button(action: {
             isPresented.toggle()
         }) {
             ZStack(alignment: .bottomTrailing) {
+                
+                // MARK: - 프로필 이미지
                 Bamboo.anon
                     .resizable()
                     .frame(width: size, height: size)
                     .clipShape(Circle())
                     .padding([.bottom, .trailing], 2)
+                
+                // MARK: - 화살표 아이콘
                 Bamboo.expand
                     .resizable()
                     .foregroundColor(Bamboo.darkGray)
@@ -36,6 +41,8 @@ struct ProfileView: View {
             }
         }
         .scaleButton()
+        
+        // MARK: - 커스텀 Sheet
         .partialSheet(isPresented: $isPresented,
                       iPhoneStyle: PSIphoneStyle.init(background: .solid(.white),
                                                       handleBarStyle: .none,

@@ -8,10 +8,9 @@
 import SwiftUI
 import LinkNavigator
 
-// MARK: - Profile Selection View
+// MARK: - 프로필 선택 뷰
 struct ProfileSelectionView: View {
-    
-    /// Variables
+
     @AppStorage("isAnon", store: .standard) var isAnon: Bool = true
     @State private var anon: Bool = true
     @State private var user: Bool = false
@@ -29,6 +28,8 @@ struct ProfileSelectionView: View {
     
     var body: some View {
         VStack(spacing: 12) {
+            
+            // MARK: - 상단 바
             Capsule()
                 .fill(Bamboo.makeColor("#DDDDDD"))
                 .frame(width: 40, height: 4)
@@ -41,6 +42,7 @@ struct ProfileSelectionView: View {
                 .fill(Bamboo.makeColor("#F2F2F2"))
                 .frame(height: 1)
             
+            // MARK: - 익명
             HStack(spacing: 12) {
                 Bamboo.anon
                     .resizable()
@@ -55,6 +57,7 @@ struct ProfileSelectionView: View {
                 }, $anon)
             }
             
+            // MARK: - 도담도담 사용자
             HStack(spacing: 12) {
                 Button(action: action) {
                     Bamboo.plus

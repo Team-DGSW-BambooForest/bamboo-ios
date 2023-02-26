@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-// MARK: - Text Extension of Bamboo
+// MARK: - 텍스트 확장
 extension Text {
     
-    // MARK: - Sets Font Size Easier
+    // MARK: - 폰트 쉽게 적용하기
     func setFont(_ size: CGFloat, _ weight: Font.Weight = .regular) -> Text {
         self
             .font(.system(size: size, weight: weight))

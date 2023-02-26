@@ -8,17 +8,17 @@
 import SwiftUI
 import Refresher
 
-// MARK: - View Extension of Bamboo
+// MARK: - 뷰 확장
 extension View {
     
-    // MARK: - Makes Edge of View Rounder
+    // MARK: - 테두리 둥글게 만들기
     @ViewBuilder func roundedEdge(_ radius: CGFloat) -> some View {
         self
             .clipShape(RoundedRectangle(cornerRadius: radius))
     }
 }
 
-// MARK: - Function Extensions of UINavigationController
+// MARK: - 커스텀 네비게이션에 제스처 적용하기
 extension UINavigationController: UIGestureRecognizerDelegate {
     override open func viewDidLoad() {
         super.viewDidLoad()

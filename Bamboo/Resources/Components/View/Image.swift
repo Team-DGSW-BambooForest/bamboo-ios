@@ -8,20 +8,18 @@
 import SwiftUI
 import Kingfisher
 
-// MARK: - Image Processor of Bamboo
+// MARK: - 이미지 프로세서
 struct BambooImage: View {
-    
-    /// Variables
+
     let url: String
-    
-    /// Initializer
+
     init(_ url: String) {
         self.url = url
     }
     
     var body: some View {
         
-        // MARK: - Main Image
+        // MARK: - 이미지
         KFImage(URL(string: url))
             .placeholder {
                 Bamboo.lightGray

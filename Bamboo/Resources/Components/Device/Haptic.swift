@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - Haptic Manager
+// MARK: - 햅틱 매니저
 class HapticManager {
     static let instance = HapticManager()
     
@@ -22,7 +22,7 @@ class HapticManager {
     }
 }
 
-// MARK: - Haptic Maker
+// MARK: - 터치 햅틱
 public func touch() {
     HapticManager.instance.impact(style: .light)
 }

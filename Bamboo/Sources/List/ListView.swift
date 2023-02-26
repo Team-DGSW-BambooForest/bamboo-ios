@@ -9,6 +9,7 @@ import SwiftUI
 import LinkNavigator
 import Refresher
 
+// MARK: - 리스트 뷰
 struct ListView: View {
     
     @ObservedObject private var data = ListModel()
@@ -18,8 +19,10 @@ struct ListView: View {
     var body: some View {
         VStack(spacing: 0) {
             
-            // MARK: - Top Bar
+            // MARK: - 상단 바
             HStack(spacing: 15) {
+                
+                // MARK: - 대대숲 로고
                 ZStack(alignment: .leading) {
                     Bamboo.logo
                         .resizable()
@@ -29,23 +32,27 @@ struct ListView: View {
                         .padding(.leading, 23.5)
                 }
                 Spacer()
+                
+                // MARK: - 검색 버튼
                 Button(action: {
                     navigator!.next(paths: ["search"], items: [:], isAnimated: true)
                 }) {
                     Bamboo.search
                 }
                 .padding(.trailing, 5)
+                
+                // MARK: - 프로필 선택 버튼
                 ProfileView(size: 34, navigator: navigator)
             }
             .padding(.top, 8)
             .padding([.horizontal, .bottom], 14)
             
-            // MARK: - List Items
+            // MARK: - 리스트
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 8) {
                     ForEach(data.list, id: \.self) { post in
                         
-                        // MARK: - List Item
+                        // MARK: - 리스트 셀
                         Button(action: {
                             navigator!.next(paths: ["post"],
                                             items: ["postId": String(post.postId)],
@@ -67,6 +74,8 @@ struct ListView: View {
                         }
                         .transition(.opacity)
                     }
+                    
+                    // MARK: - 페이징을 위한 숨은 뷰
                     Rectangle()
                         .hidden()
                         .onAppear { data.loadData() }

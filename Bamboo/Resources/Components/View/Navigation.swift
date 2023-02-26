@@ -7,25 +7,23 @@
 
 import SwiftUI
 
-// MARK: - Custom Navigation Bar of Bamboo
+// MARK: - 커스텀 네비게이션 바
 struct BambooNavigation<Content: View>: View {
     
     @Environment(\.presentationMode) var presentationMode
-    
-    /// Variables
+
     let content: Content
 
-    /// Initializer
     init(@ViewBuilder content: () -> Content) {
         self.content = content()
     }
     
     var body: some View {
         
-        // MARK: - Main Bar
+        // MARK: - 네비게이션 바
         HStack {
             
-            // MARK: - Dismiss Button
+            // MARK: - 닫기 버튼
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
@@ -36,7 +34,7 @@ struct BambooNavigation<Content: View>: View {
                     .frame(width: 24)
                     .foregroundColor(Bamboo.black)
             }
-            // MARK: - Content
+            // MARK: - 뷰
             content
         }
         .padding(.vertical, 8)

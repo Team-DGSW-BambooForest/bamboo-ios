@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-// MARK: - Assets to Class
+// MARK: - 에셋 집합 클래스
 class Bamboo {
     
-    // MARK: - Makes Hexcode to UIColor
+    // MARK: - 16진수 코드를 UIColor로 변환
     public static func hexToColor(hex: String) -> UIColor {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
@@ -21,7 +21,7 @@ class Bamboo {
                        alpha: 1)
     }
     
-    // MARK: - Makes Two Hexcodes to Color
+    // MARK: - 16진수 코드 2개를 다이나믹 컬러로 변환
     public static func makeColor(_ light: String, dark: String? = nil) -> Color {
         let lightColor = hexToColor(hex: light)
         if dark == nil {
@@ -32,12 +32,12 @@ class Bamboo {
         }
     }
     
-    // MARK: - Gradient
+    // MARK: - 그라디언트
     static let primary    = LinearGradient(gradient: Gradient(colors: [Bamboo.aqua, Bamboo.green]),
                                            startPoint: .topLeading,
                                            endPoint: .bottomTrailing)
     
-    // MARK: - Colors
+    // MARK: - 색
     static let green      = Color("Green")
     static let aqua       = Color("Aqua")
     static let black      = Color("Black")
@@ -45,7 +45,7 @@ class Bamboo {
     static let gray       = Color("Gray")
     static let lightGray  = Color("Light Gray")
     
-    // MARK: - Icons
+    // MARK: - 아이콘
     static let camera     = Image("Camera")
     static let clear      = Image("Clear")
     static let expand     = Image("Expand")
@@ -59,7 +59,7 @@ class Bamboo {
     static let top        = Image("Top")
     static let unreadMail = Image("UnreadMail")
     
-    // MARK: - Images
+    // MARK: - 이미지
     static let anon       = Image("Anon")
     static let logo       = Image("Logo")
 }
