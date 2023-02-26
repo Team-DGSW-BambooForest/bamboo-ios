@@ -28,6 +28,7 @@ struct ListView: View {
                         .frame(width: 28, height: 28)
                     Text("대대숲")
                         .setFont(20, .medium)
+                        .foregroundColor(.black)
                         .padding(.leading, 23.5)
                 }
                 Spacer()
@@ -86,6 +87,7 @@ struct ListView: View {
             }
             .background(Bamboo.makeColor("#F2F4F9"))
         }
+        .background(Color.white)
         .edgesIgnoringSafeArea(.bottom)
     }
 }

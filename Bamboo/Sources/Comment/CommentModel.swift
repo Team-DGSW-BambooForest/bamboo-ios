@@ -19,3 +19,4 @@ struct FullComment: Codable, Hashable {
     let comment: Comment
     let nested: [Comment]
 }
+

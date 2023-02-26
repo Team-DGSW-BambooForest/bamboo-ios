@@ -20,7 +20,7 @@ struct AppMain: App {
     var body: some Scene {
         WindowGroup {
             navigator
-                .launch(paths: ["list"], items: [:])
+                .launch(paths: ["splash"], items: [:])
                 //.launch(paths: ["login"], items: [:])
                 .ignoresSafeArea()
                 .attachPartialSheetToRoot()

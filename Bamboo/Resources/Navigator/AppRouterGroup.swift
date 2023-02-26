@@ -13,6 +13,7 @@ struct AppRouterGroup {
         
         // MARK: - 라우터 만들때마다 여기에 추가
         [
+            SplashRouteBuilder(),
             ListRouteBuilder(),
             PostRouteBuilder(),
             SearchRouteBuilder(),

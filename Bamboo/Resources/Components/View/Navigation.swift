@@ -27,7 +27,7 @@ struct BambooNavigation<Content: View>: View {
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
-                Image("Back")
+                Bamboo.back
                     .renderingMode(.template)
                     .resizable()
                     .scaledToFit()

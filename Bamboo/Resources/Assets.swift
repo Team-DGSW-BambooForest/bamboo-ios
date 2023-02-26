@@ -46,6 +46,8 @@ class Bamboo {
     static let lightGray  = Color("Light Gray")
     
     // MARK: - 아이콘
+    static let back       = Image("Back")
+    static let bamboo     = Image("Bamboo")
     static let camera     = Image("Camera")
     static let clear      = Image("Clear")
     static let expand     = Image("Expand")
