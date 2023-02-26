@@ -35,7 +35,7 @@ struct ListView: View {
                     Bamboo.search
                 }
                 .padding(.trailing, 5)
-                ProfileView(size: 34)
+                ProfileView(size: 34, navigator: navigator)
             }
             .padding(.top, 8)
             .padding([.horizontal, .bottom], 14)

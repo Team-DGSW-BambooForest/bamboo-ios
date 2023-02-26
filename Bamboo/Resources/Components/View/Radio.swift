@@ -13,8 +13,13 @@ struct BambooRadio: View {
     /// Bindings
     @Binding var state: Bool
     
+    /// Variables
+    let action: () -> Void
+    
     /// Initializer
-    init(_ state: Binding<Bool>) {
+    init(action: @escaping () -> Void,
+         _ state: Binding<Bool>) {
+        self.action = action
         self._state = state
     }
     
@@ -23,7 +28,7 @@ struct BambooRadio: View {
         // MARK: - Main Button
         Button(action: {
             withAnimation(.default) {
-                state.toggle()
+                action()
             }
         }) {
             ZStack {

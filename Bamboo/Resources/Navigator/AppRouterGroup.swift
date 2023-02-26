@@ -12,7 +12,8 @@ struct AppRouterGroup {
         [
             ListRouteBuilder(),
             PostRouteBuilder(),
-            SearchRouteBuilder()
+            SearchRouteBuilder(),
+            LoginRouteBuilder()
         ]
     }
 }

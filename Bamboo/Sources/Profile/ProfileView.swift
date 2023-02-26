@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LinkNavigator
 import PartialSheet
 
 // MARK: - Profile View
@@ -14,6 +15,7 @@ struct ProfileView: View {
     /// Variables
     @State private var isPresented: Bool = false
     let size: CGFloat
+    let navigator: LinkNavigatorType?
     
     var body: some View {
         Button(action: {
@@ -24,6 +26,7 @@ struct ProfileView: View {
                     .resizable()
                     .frame(width: size, height: size)
                     .clipShape(Circle())
+                    .padding([.bottom, .trailing], 2)
                 Bamboo.expand
                     .resizable()
                     .foregroundColor(Bamboo.darkGray)
@@ -39,7 +42,10 @@ struct ProfileView: View {
                                                       cover: .enabled(.black.opacity(0.2)),
                                                       cornerRadius: 15))
         {
-            ProfileSelectionView()
+            ProfileSelectionView {
+                isPresented.toggle()
+                navigator!.next(paths: ["login"], items: [:], isAnimated: true)
+            }
         }
     }
 }

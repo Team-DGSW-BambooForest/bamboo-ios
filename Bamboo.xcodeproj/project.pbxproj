@@ -34,7 +34,7 @@
 		939F7AB429A5494D002AE93E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AB329A5494D002AE93E /* SearchView.swift */; };
 		939F7AB629A54953002AE93E /* SearchRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AB529A54953002AE93E /* SearchRouteBuilder.swift */; };
 		939F7AB929A5517D002AE93E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7AB829A5517D002AE93E /* PostView.swift */; };
-		939F7ABB29A55183002AE93E /* PostRouterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7ABA29A55183002AE93E /* PostRouterBuilder.swift */; };
+		939F7ABB29A55183002AE93E /* PostRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7ABA29A55183002AE93E /* PostRouteBuilder.swift */; };
 		939F7ABD29A559D2002AE93E /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F7ABC29A559D2002AE93E /* PostModel.swift */; };
 		93B8D6ED29A7C66F0056E2FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8D6EC29A7C66F0056E2FD /* ProfileView.swift */; };
 		93CE181929A20A4D00A5C8A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93CE181829A20A4D00A5C8A2 /* Kingfisher */; };
@@ -74,7 +74,7 @@
 		939F7AB329A5494D002AE93E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		939F7AB529A54953002AE93E /* SearchRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouteBuilder.swift; sourceTree = "<group>"; };
 		939F7AB829A5517D002AE93E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		939F7ABA29A55183002AE93E /* PostRouterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRouterBuilder.swift; sourceTree = "<group>"; };
+		939F7ABA29A55183002AE93E /* PostRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRouteBuilder.swift; sourceTree = "<group>"; };
 		939F7ABC29A559D2002AE93E /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		93B8D6EC29A7C66F0056E2FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		93CE181629A20A0F00A5C8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				939F7AB829A5517D002AE93E /* PostView.swift */,
-				939F7ABA29A55183002AE93E /* PostRouterBuilder.swift */,
+				939F7ABA29A55183002AE93E /* PostRouteBuilder.swift */,
 				939F7ABC29A559D2002AE93E /* PostModel.swift */,
 			);
 			path = Post;
@@ -354,7 +354,7 @@
 				93CE182029A258E000A5C8A2 /* LoginView.swift in Sources */,
 				939F7A9A29A4884C002AE93E /* LoginRouteBuilder.swift in Sources */,
 				939F7ABD29A559D2002AE93E /* PostModel.swift in Sources */,
-				939F7ABB29A55183002AE93E /* PostRouterBuilder.swift in Sources */,
+				939F7ABB29A55183002AE93E /* PostRouteBuilder.swift in Sources */,
 				939F7A9229A47FD9002AE93E /* AppRouterGroup.swift in Sources */,
 				93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */,
 				936459CB29A0C88200A15CCF /* Radio.swift in Sources */,

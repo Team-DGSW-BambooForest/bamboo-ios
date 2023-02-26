@@ -6,11 +6,26 @@
 //
 
 import SwiftUI
+import LinkNavigator
 
 // MARK: - Profile Selection View
 struct ProfileSelectionView: View {
     
+    /// Variables
     @AppStorage("isAnon", store: .standard) var isAnon: Bool = true
+    @State private var anon: Bool = true
+    @State private var user: Bool = false
+    let action: () -> Void
+    
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
+    
+    private func changeUser(_ to: Bool) {
+        isAnon = to
+        anon = to
+        user = !to
+    }
     
     var body: some View {
         VStack(spacing: 12) {
@@ -35,8 +50,27 @@ struct ProfileSelectionView: View {
                 Text("익명이")
                     .setFont(12)
                 Spacer()
-                BambooRadio($isAnon)
+                BambooRadio(action: {
+                    changeUser(true)
+                }, $anon)
             }
+            
+            HStack(spacing: 12) {
+                Button(action: action) {
+                    Bamboo.plus
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(width: 34, height: 34)
+                        .clipShape(Circle())
+                    Text("도담도담 계정을 등록하세요!")
+                        .setFont(12)
+                }
+                Spacer()
+                BambooRadio(action: {
+                    changeUser(false)
+                }, $user)
+            }
+            .foregroundColor(Bamboo.gray)
         }
         .padding(.vertical, 12)
         .padding(.horizontal, 14)
