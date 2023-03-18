@@ -11,7 +11,7 @@ import LinkNavigator
 // MARK: - 리스트 뷰
 struct ListView: View {
     
-    @ObservedObject private var data = ListModel()
+    @ObservedObject private var state = ListState()
     @State var selection: Bool = false
     let navigator: LinkNavigatorType?
     
@@ -50,7 +50,7 @@ struct ListView: View {
             // MARK: - 리스트
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 8) {
-                    ForEach(data.list, id: \.self) { post in
+                    ForEach(state.list, id: \.self) { post in
                         
                         // MARK: - 리스트 셀
                         Button(action: {
@@ -78,12 +78,12 @@ struct ListView: View {
                     // MARK: - 페이징을 위한 숨은 뷰
                     Rectangle()
                         .hidden()
-                        .onAppear { data.loadData() }
+                        .onAppear { state.loadData() }
                 }
                 .padding(.top, 8)
             }
             .refreshable {
-                data.refreshData()
+                state.refreshData()
             }
             .background(Bamboo.makeColor("#F2F4F9"))
         }

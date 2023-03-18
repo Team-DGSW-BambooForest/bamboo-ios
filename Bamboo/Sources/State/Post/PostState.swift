@@ -1,25 +1,11 @@
 //
-//  PostModel.swift
+//  PostState.swift
 //  Bamboo
 //
-//  Created by Mercen on 2023/02/22.
+//  Created by Mercen on 2023/03/19.
 //
 
-import SwiftUI
-
-struct HashTag: Codable, Hashable {
-    let tagId: Int
-    let hashTag: String
-}
-
-struct Post: Codable, Hashable {
-    let postId: Int
-    let author: String
-    let profileImage: String
-    let content: String
-    let createdAt: Date
-    let hashTags: [HashTag]
-}
+import Combine
 
 // MARK: - 포스트 모델
 class PostModel: ObservableObject {
