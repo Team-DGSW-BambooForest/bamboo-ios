@@ -47,6 +47,8 @@
 		93D742BA29AB4DF300CEBF47 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D742B929AB4DF300CEBF47 /* SplashView.swift */; };
 		93D742BC29AB4DFA00CEBF47 /* SplashRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D742BB29AB4DFA00CEBF47 /* SplashRouteBuilder.swift */; };
 		93D8A37529A37DBA007498F0 /* ProfileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */; };
+		93EDA4D829C7D79300B6FF96 /* ListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4D729C7D79300B6FF96 /* ListState.swift */; };
+		93EDA4DC29C7D82500B6FF96 /* PostState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4DB29C7D82500B6FF96 /* PostState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		93D742B929AB4DF300CEBF47 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		93D742BB29AB4DFA00CEBF47 /* SplashRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouteBuilder.swift; sourceTree = "<group>"; };
 		93D8A37429A37DBA007498F0 /* ProfileSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectionView.swift; sourceTree = "<group>"; };
+		93EDA4D729C7D79300B6FF96 /* ListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListState.swift; sourceTree = "<group>"; };
+		93EDA4DB29C7D82500B6FF96 /* PostState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,13 +161,9 @@
 		936459C629A0C81A00A15CCF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				93D742B829AB4DE500CEBF47 /* Splash */,
-				936459D329A0CA3D00A15CCF /* List */,
-				93D742AE29A9ECC200CEBF47 /* Profile */,
-				939F7AB729A55173002AE93E /* Post */,
-				93D742B129AB3E1400CEBF47 /* Comment */,
-				939F7AB229A54943002AE93E /* Search */,
-				93CE181E29A258C600A5C8A2 /* Login */,
+				93EDA4DA29C7D80200B6FF96 /* Model */,
+				93EDA4DE29C7D86500B6FF96 /* View */,
+				93EDA4DD29C7D84900B6FF96 /* State */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -173,7 +173,6 @@
 			children = (
 				935560D62935912200CD66C2 /* ListView.swift */,
 				939F7A9729A480F5002AE93E /* ListRouteBuilder.swift */,
-				93CE181A29A2570E00A5C8A2 /* ListModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -233,7 +232,6 @@
 			children = (
 				939F7AB829A5517D002AE93E /* PostView.swift */,
 				939F7ABA29A55183002AE93E /* PostRouteBuilder.swift */,
-				939F7ABC29A559D2002AE93E /* PostModel.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -262,7 +260,6 @@
 			children = (
 				93CE181F29A258E000A5C8A2 /* LoginView.swift */,
 				939F7A9929A4884B002AE93E /* LoginRouteBuilder.swift */,
-				93CE182129A258E800A5C8A2 /* LoginModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -281,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				93D742B429AB3E2900CEBF47 /* CommentView.swift */,
-				93D742B629AB3E2F00CEBF47 /* CommentModel.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -293,6 +289,88 @@
 				93D742BB29AB4DFA00CEBF47 /* SplashRouteBuilder.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		93EDA4DA29C7D80200B6FF96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93EDA4DF29C7D88700B6FF96 /* List */,
+				93EDA4E129C7D8A800B6FF96 /* Post */,
+				93EDA4E329C7D8B400B6FF96 /* Comment */,
+				93EDA4E229C7D8AD00B6FF96 /* Login */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93EDA4DD29C7D84900B6FF96 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				93EDA4E029C7D88B00B6FF96 /* List */,
+				93EDA4E429C7D8C400B6FF96 /* Post */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		93EDA4DE29C7D86500B6FF96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93D742B829AB4DE500CEBF47 /* Splash */,
+				936459D329A0CA3D00A15CCF /* List */,
+				93D742AE29A9ECC200CEBF47 /* Profile */,
+				939F7AB729A55173002AE93E /* Post */,
+				93D742B129AB3E1400CEBF47 /* Comment */,
+				939F7AB229A54943002AE93E /* Search */,
+				93CE181E29A258C600A5C8A2 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93EDA4DF29C7D88700B6FF96 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				93CE181A29A2570E00A5C8A2 /* ListModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		93EDA4E029C7D88B00B6FF96 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				93EDA4D729C7D79300B6FF96 /* ListState.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		93EDA4E129C7D8A800B6FF96 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				939F7ABC29A559D2002AE93E /* PostModel.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		93EDA4E229C7D8AD00B6FF96 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				93CE182129A258E800A5C8A2 /* LoginModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		93EDA4E329C7D8B400B6FF96 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				93D742B629AB3E2F00CEBF47 /* CommentModel.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		93EDA4E429C7D8C400B6FF96 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				93EDA4DB29C7D82500B6FF96 /* PostState.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,9 +462,11 @@
 				93CE182229A258E800A5C8A2 /* LoginModel.swift in Sources */,
 				936459CB29A0C88200A15CCF /* Radio.swift in Sources */,
 				939F7AA729A51667002AE93E /* Interceptor.swift in Sources */,
+				93EDA4DC29C7D82500B6FF96 /* PostState.swift in Sources */,
 				936459C929A0C84A00A15CCF /* Button.swift in Sources */,
 				93D742B529AB3E2900CEBF47 /* CommentView.swift in Sources */,
 				93CE182529A25AD800A5C8A2 /* Constants.swift in Sources */,
+				93EDA4D829C7D79300B6FF96 /* ListState.swift in Sources */,
 				936459DA29A0CC7C00A15CCF /* TextExt.swift in Sources */,
 				939F7A9629A48006002AE93E /* AppMain.swift in Sources */,
 				936459E229A0F28400A15CCF /* Haptic.swift in Sources */,

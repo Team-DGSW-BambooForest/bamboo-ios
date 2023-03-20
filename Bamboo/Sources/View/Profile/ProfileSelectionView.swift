@@ -30,9 +30,11 @@ struct ProfileSelectionView: View {
         VStack(spacing: 12) {
             
             // MARK: - 상단 바
-            Capsule()
-                .fill(Bamboo.makeColor("#DDDDDD"))
-                .frame(width: 40, height: 4)
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                Capsule()
+                    .fill(Bamboo.makeColor("#DDDDDD"))
+                    .frame(width: 40, height: 4)
+            }
             
             Text("내 프로필 선택")
                 .foregroundColor(Bamboo.black)
@@ -58,15 +60,17 @@ struct ProfileSelectionView: View {
             }
             
             // MARK: - 도담도담 사용자
-            HStack(spacing: 12) {
+            HStack {
                 Button(action: action) {
-                    Bamboo.plus
-                        .renderingMode(.template)
-                        .resizable()
-                        .frame(width: 34, height: 34)
-                        .clipShape(Circle())
-                    Text("도담도담 계정을 등록하세요!")
-                        .setFont(12)
+                    HStack(spacing: 12) {
+                        Bamboo.plus
+                            .renderingMode(.template)
+                            .resizable()
+                            .frame(width: 34, height: 34)
+                            .clipShape(Circle())
+                        Text("도담도담 계정을 등록하세요!")
+                            .setFont(12)
+                    }
                 }
                 Spacer()
                 BambooRadio(action: {
