@@ -1,19 +1,18 @@
-# Bamboo-iOS
+# bamboo-ios
 
 ### ☘️ 개발 원칙
-- MV State 아키텍처
+- MVVM + 클린 아키텍처
 - SPM 사용
-- 빌드 타깃 iOS 15
-- iPadOS 대응
+- 빌드 타깃 iOS 13
 
 ### 🌿 사용 언어
 - Swift
 
 ### 🌱 사용 프레임워크
-- SwiftUI & Combine
-- Alamofire
-- KingFisher
-- LinkNavigator
+- SnapKit
+- RxSwift
+- ReactorKit
+- Moya
 
 ### 🍃 커밋 규칙
 >[이모지] 상세내용
