@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		9382CB8E29DBC79800E31C59 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB8D29DBC79800E31C59 /* ListCell.swift */; };
 		9382CB9229DBC90600E31C59 /* ReusableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB9129DBC90600E31C59 /* ReusableExt.swift */; };
+		9382CB9729DBCD7800E31C59 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB9629DBCD7800E31C59 /* PostVC.swift */; };
+		9382CB9929DBCD7D00E31C59 /* PostReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB9829DBCD7D00E31C59 /* PostReactor.swift */; };
+		9382CB9B29DBCD8200E31C59 /* WriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB9A29DBCD8200E31C59 /* WriteVC.swift */; };
+		9382CB9D29DBCD8600E31C59 /* WriteReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB9C29DBCD8600E31C59 /* WriteReactor.swift */; };
+		9382CB9F29DBCD8A00E31C59 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB9E29DBCD8A00E31C59 /* SearchVC.swift */; };
+		9382CBA129DBCD8E00E31C59 /* SearchReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CBA029DBCD8E00E31C59 /* SearchReactor.swift */; };
 		939371EC29CE95960042624D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939371EB29CE95960042624D /* AppDelegate.swift */; };
 		939371EE29CE95960042624D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939371ED29CE95960042624D /* SceneDelegate.swift */; };
 		939371F029CE95960042624D /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939371EF29CE95960042624D /* BaseVC.swift */; };
@@ -76,6 +82,12 @@
 		933DEAFB29DB1506002AF6C0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9382CB8D29DBC79800E31C59 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		9382CB9129DBC90600E31C59 /* ReusableExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableExt.swift; sourceTree = "<group>"; };
+		9382CB9629DBCD7800E31C59 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		9382CB9829DBCD7D00E31C59 /* PostReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReactor.swift; sourceTree = "<group>"; };
+		9382CB9A29DBCD8200E31C59 /* WriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteVC.swift; sourceTree = "<group>"; };
+		9382CB9C29DBCD8600E31C59 /* WriteReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReactor.swift; sourceTree = "<group>"; };
+		9382CB9E29DBCD8A00E31C59 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		9382CBA029DBCD8E00E31C59 /* SearchReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReactor.swift; sourceTree = "<group>"; };
 		939371E829CE95960042624D /* Bamboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bamboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939371EB29CE95960042624D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		939371ED29CE95960042624D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +186,41 @@
 				9382CB9129DBC90600E31C59 /* ReusableExt.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		9382CB9329DBCD4E00E31C59 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9382CB9E29DBCD8A00E31C59 /* SearchVC.swift */,
+				9382CBA029DBCD8E00E31C59 /* SearchReactor.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9382CB9429DBCD5200E31C59 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				9382CB9A29DBCD8200E31C59 /* WriteVC.swift */,
+				9382CB9C29DBCD8600E31C59 /* WriteReactor.swift */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		9382CB9529DBCD5900E31C59 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				9382CB9629DBCD7800E31C59 /* PostVC.swift */,
+				9382CB9829DBCD7D00E31C59 /* PostReactor.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		9382CBA229DBD0AE00E31C59 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				93E6623029D172AB00FFD16B /* FormatterExt.swift */,
+			);
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 		93866D4A29D9C1170073DCE3 /* Dodam */ = {
@@ -293,6 +340,9 @@
 			isa = PBXGroup;
 			children = (
 				9393726C29CED6890042624D /* List */,
+				9382CB9529DBCD5900E31C59 /* Post */,
+				9382CB9429DBCD5200E31C59 /* Write */,
+				9382CB9329DBCD4E00E31C59 /* Search */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -324,7 +374,7 @@
 		9393722229CEBA240042624D /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				93E6623029D172AB00FFD16B /* FormatterExt.swift */,
+				9382CBA229DBD0AE00E31C59 /* Formatter */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -819,6 +869,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9382CB9929DBCD7D00E31C59 /* PostReactor.swift in Sources */,
 				9393722829CEBA760042624D /* Assets+Bamboo.swift in Sources */,
 				93E6620529D01E6D00FFD16B /* ListRepositoryImpl.swift in Sources */,
 				93E6622C29D121A500FFD16B /* BambooAuthAPI.swift in Sources */,
@@ -834,10 +885,12 @@
 				9393725F29CED2DE0042624D /* RepositoryAssembly.swift in Sources */,
 				9393726329CED2EC0042624D /* UseCaseAssembly.swift in Sources */,
 				9393724329CEC9470042624D /* KeychainService.swift in Sources */,
+				9382CBA129DBCD8E00E31C59 /* SearchReactor.swift in Sources */,
 				93E6621F29D06D0900FFD16B /* AuthRemote.swift in Sources */,
 				93E6622F29D121ED00FFD16B /* ListRemote.swift in Sources */,
 				9393725729CECBF70042624D /* BambooError.swift in Sources */,
 				9393726529CED2F40042624D /* ViewControllerAssembly.swift in Sources */,
+				9382CB9B29DBCD8200E31C59 /* WriteVC.swift in Sources */,
 				9393723829CEC6AC0042624D /* Inject.swift in Sources */,
 				93E6620B29D01EF300FFD16B /* BambooListAPI.swift in Sources */,
 				9393726129CED2E30042624D /* DataSourceAssembly.swift in Sources */,
@@ -845,6 +898,7 @@
 				9393726E29CED6930042624D /* ListVC.swift in Sources */,
 				9393726929CED2FF0042624D /* FlowAssembly.swift in Sources */,
 				9393724F29CECADC0042624D /* ListDataSource.swift in Sources */,
+				9382CB9729DBCD7800E31C59 /* PostVC.swift in Sources */,
 				93E6621929D06C9A00FFD16B /* TokenRefreshRequest.swift in Sources */,
 				93E6623129D172AB00FFD16B /* FormatterExt.swift in Sources */,
 				93E6622729D11FF800FFD16B /* DodamResponse.swift in Sources */,
@@ -864,7 +918,9 @@
 				9393722A29CEBB820042624D /* AppFlow.swift in Sources */,
 				93E6623329D1765400FFD16B /* BaseCollectionViewCell.swift in Sources */,
 				9382CB8E29DBC79800E31C59 /* ListCell.swift in Sources */,
+				9382CB9F29DBCD8A00E31C59 /* SearchVC.swift in Sources */,
 				9393724D29CECAD70042624D /* AuthDataSource.swift in Sources */,
+				9382CB9D29DBCD8600E31C59 /* WriteReactor.swift in Sources */,
 				93E6621C29D06CCA00FFD16B /* SignInRequest.swift in Sources */,
 				93E6622A29D1203D00FFD16B /* BambooTokenAPI.swift in Sources */,
 				93E6622229D10C0D00FFD16B /* SignInData.swift in Sources */,

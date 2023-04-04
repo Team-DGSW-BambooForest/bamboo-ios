@@ -20,6 +20,7 @@ final class ListVC: BaseVC<ListReactor> {
 
     // MARK: - Properties
     private let topContainer = UIView()
+    private let refreshControl = UIRefreshControl()
     
     private let logoImage = UIImageView().then {
         $0.image = BambooAsset.logo!
@@ -80,6 +81,10 @@ final class ListVC: BaseVC<ListReactor> {
     }
 
     // MARK: - UI
+    override func configureVC() {
+        listView.refreshControl = refreshControl
+    }
+    
     override func addView() {
         view.addSubViews(topContainer,
                          logoImage,
@@ -119,10 +124,6 @@ final class ListVC: BaseVC<ListReactor> {
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
         }
-    }
-
-    override func configureVC() {
-        
     }
 
     // MARK: - Reactor
