@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9382CB8E29DBC79800E31C59 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB8D29DBC79800E31C59 /* ListCell.swift */; };
+		9382CB9229DBC90600E31C59 /* ReusableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB9129DBC90600E31C59 /* ReusableExt.swift */; };
 		939371EC29CE95960042624D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939371EB29CE95960042624D /* AppDelegate.swift */; };
 		939371EE29CE95960042624D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939371ED29CE95960042624D /* SceneDelegate.swift */; };
 		939371F029CE95960042624D /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939371EF29CE95960042624D /* BaseVC.swift */; };
@@ -66,12 +68,14 @@
 		93E6622F29D121ED00FFD16B /* ListRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6622E29D121ED00FFD16B /* ListRemote.swift */; };
 		93E6623129D172AB00FFD16B /* FormatterExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6623029D172AB00FFD16B /* FormatterExt.swift */; };
 		93E6623329D1765400FFD16B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6623229D1765400FFD16B /* BaseCollectionViewCell.swift */; };
-		93E6623529D17BB300FFD16B /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6623429D17BB300FFD16B /* ViewExt.swift */; };
+		93E6623529D17BB300FFD16B /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6623429D17BB300FFD16B /* UIViewExt.swift */; };
 		93E6623829D17CFC00FFD16B /* TokenRefreshData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6623729D17CFC00FFD16B /* TokenRefreshData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		933DEAFB29DB1506002AF6C0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9382CB8D29DBC79800E31C59 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		9382CB9129DBC90600E31C59 /* ReusableExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableExt.swift; sourceTree = "<group>"; };
 		939371E829CE95960042624D /* Bamboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bamboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939371EB29CE95960042624D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		939371ED29CE95960042624D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 		93E6622E29D121ED00FFD16B /* ListRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRemote.swift; sourceTree = "<group>"; };
 		93E6623029D172AB00FFD16B /* FormatterExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterExt.swift; sourceTree = "<group>"; };
 		93E6623229D1765400FFD16B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		93E6623429D17BB300FFD16B /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
+		93E6623429D17BB300FFD16B /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		93E6623729D17CFC00FFD16B /* TokenRefreshData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRefreshData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +152,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9382CB8C29DBC78E00E31C59 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9382CB8D29DBC79800E31C59 /* ListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9382CB8F29DBC8E400E31C59 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				93E6623429D17BB300FFD16B /* UIViewExt.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		9382CB9029DBC8EB00E31C59 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				9382CB9129DBC90600E31C59 /* ReusableExt.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		93866D4A29D9C1170073DCE3 /* Dodam */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,7 +332,8 @@
 		9393722329CEBA270042624D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				93E6623429D17BB300FFD16B /* ViewExt.swift */,
+				9382CB8F29DBC8E400E31C59 /* UIView */,
+				9382CB9029DBC8EB00E31C59 /* Reusable */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -501,6 +530,7 @@
 		9393726C29CED6890042624D /* List */ = {
 			isa = PBXGroup;
 			children = (
+				9382CB8C29DBC78E00E31C59 /* Cell */,
 				9393726D29CED6930042624D /* ListVC.swift */,
 				9393726F29CED6960042624D /* ListReactor.swift */,
 			);
@@ -793,7 +823,7 @@
 				93E6620529D01E6D00FFD16B /* ListRepositoryImpl.swift in Sources */,
 				93E6622C29D121A500FFD16B /* BambooAuthAPI.swift in Sources */,
 				93E661FF29D00A0200FFD16B /* ParamUseCase.swift in Sources */,
-				93E6623529D17BB300FFD16B /* ViewExt.swift in Sources */,
+				93E6623529D17BB300FFD16B /* UIViewExt.swift in Sources */,
 				93E6621129D0627F00FFD16B /* ListRequest.swift in Sources */,
 				9393726B29CED3050042624D /* StepperAssembly.swift in Sources */,
 				9393722C29CEBC060042624D /* BambooStep.swift in Sources */,
@@ -818,6 +848,7 @@
 				93E6621929D06C9A00FFD16B /* TokenRefreshRequest.swift in Sources */,
 				93E6623129D172AB00FFD16B /* FormatterExt.swift in Sources */,
 				93E6622729D11FF800FFD16B /* DodamResponse.swift in Sources */,
+				9382CB9229DBC90600E31C59 /* ReusableExt.swift in Sources */,
 				9393727029CED6960042624D /* ListReactor.swift in Sources */,
 				93E6620129D00A5400FFD16B /* BaseUseCase.swift in Sources */,
 				9393723C29CEC7BA0042624D /* Constants.swift in Sources */,
@@ -832,6 +863,7 @@
 				9393723A29CEC7840042624D /* DependencyProvider.swift in Sources */,
 				9393722A29CEBB820042624D /* AppFlow.swift in Sources */,
 				93E6623329D1765400FFD16B /* BaseCollectionViewCell.swift in Sources */,
+				9382CB8E29DBC79800E31C59 /* ListCell.swift in Sources */,
 				9393724D29CECAD70042624D /* AuthDataSource.swift in Sources */,
 				93E6621C29D06CCA00FFD16B /* SignInRequest.swift in Sources */,
 				93E6622A29D1203D00FFD16B /* BambooTokenAPI.swift in Sources */,

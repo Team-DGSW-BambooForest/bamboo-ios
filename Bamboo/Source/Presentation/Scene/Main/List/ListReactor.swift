@@ -20,7 +20,10 @@ final class ListReactor: Reactor, Stepper {
 
     // MARK: - Reactor
     enum Action {
+        case refresh
         case searchButtonDidTap
+        case writeButtonDidTap
+        case profileButtonDidTap
     }
     enum Mutation {}
     struct State {}
@@ -38,8 +41,13 @@ final class ListReactor: Reactor, Stepper {
 extension ListReactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
+        case .refresh:
+            return .empty()
         case .searchButtonDidTap:
-            steps.accept(BambooStep.listIsRequired)
+            return .empty()
+        case .writeButtonDidTap:
+            return .empty()
+        case .profileButtonDidTap:
             return .empty()
         }
     }

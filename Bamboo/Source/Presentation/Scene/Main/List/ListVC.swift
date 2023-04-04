@@ -19,7 +19,6 @@ final class ListVC: BaseVC<ListReactor> {
     }
 
     // MARK: - Properties
-    private let rootContainer = UIView()
     private let topContainer = UIView()
     
     private let logoImage = UIImageView().then {
@@ -44,15 +43,31 @@ final class ListVC: BaseVC<ListReactor> {
         $0.tintColor = .label
     }
     
-    private let topStackView = UIStackView().then {
-        $0.axis = .horizontal
-        $0.alignment = .center
-        $0.distribution = .equalSpacing
-        $0.spacing = 15
-        $0.frame.size.height = 52
+    private let profileButton = UIButton(type: .system)
+    
+    private let profileImage = UIImageView().then {
+        $0.image = BambooAsset.anon
+        $0.contentMode = .scaleToFill
+        $0.frame.size.width = 34
+        $0.frame.size.height = 34
+        $0.layer.cornerRadius = CGRectGetWidth($0.frame) / 2
+        $0.layer.masksToBounds = true
     }
     
-
+    private let dropdownImage = UIImageView().then {
+        $0.image = BambooAsset.dropdown
+        $0.contentMode = .scaleToFill
+        $0.frame.size.width = 12
+        $0.frame.size.height = 12
+    }
+    
+    private let listView = UICollectionView(frame: .zero, collectionViewLayout: .init()).then {
+        $0.register(ListCell.self, forCellWithReuseIdentifier: ListCell.reusableID)
+        $0.backgroundColor = BambooAsset.background
+        $0.isScrollEnabled = true
+        $0.alwaysBounceVertical = true
+    }
+    
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -67,29 +82,42 @@ final class ListVC: BaseVC<ListReactor> {
     // MARK: - UI
     override func addView() {
         view.addSubViews(topContainer,
-                         rootContainer,
                          logoImage,
                          searchButton,
                          writeButton,
-                         topStackView)
+                         listView)
     }
 
     override func setLayoutSubViews() {
-        topStackView.addArrangedSubview(logoImage)
-        topStackView.addArrangedSubview(searchButton)
-        topStackView.addArrangedSubview(writeButton)
+        topContainer.addSubViews(logoImage, searchButton, writeButton)
     }
 
     override func setLayout() {
         logoImage.snp.makeConstraints { make in
+            make.leading.equalTo(topContainer)
             make.width.equalTo(78)
             make.height.equalTo(29)
+            make.centerY.equalTo(topContainer.snp.centerY)
         }
-        topStackView.snp.makeConstraints { make in
+        writeButton.snp.makeConstraints { make in
+            make.trailing.equalTo(topContainer)
+            make.centerY.equalTo(topContainer.snp.centerY)
+        }
+        searchButton.snp.makeConstraints { make in
+            make.trailing.equalTo(writeButton.snp.leading).offset(-20)
+            make.centerY.equalTo(topContainer.snp.centerY)
+        }
+        topContainer.snp.makeConstraints { make in
             make.leading.equalTo(14)
             make.trailing.equalTo(-14)
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(52)
+        }
+        listView.snp.makeConstraints { make in
+            make.top.equalTo(topContainer.snp.bottom)
+            make.bottom.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
         }
     }
 
@@ -99,9 +127,17 @@ final class ListVC: BaseVC<ListReactor> {
 
     // MARK: - Reactor
     override func bindView(reactor: ListReactor) {
-//        signUpButton.rx.tap
-//            .map { _ in Reactor.Action.signUpButtonDidTap }
-//            .bind(to: reactor.action)
-//            .disposed(by: disposeBag)
+        searchButton.rx.tap
+            .map { _ in Reactor.Action.searchButtonDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        writeButton.rx.tap
+            .map { _ in Reactor.Action.writeButtonDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        profileButton.rx.tap
+            .map { _ in Reactor.Action.profileButtonDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
 }

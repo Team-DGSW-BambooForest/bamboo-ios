@@ -21,6 +21,7 @@ public enum BambooAsset {
     static let darkGray   = UIColor(named: "Dark Gray")
     static let gray       = UIColor(named: "Gray")
     static let lightGray  = UIColor(named: "Light Gray")
+    static let background = UIColor(named: "Background")
     
     // MARK: - 아이콘
     static let add       = UIImage(named: "Add")
@@ -28,6 +29,7 @@ public enum BambooAsset {
     static let bamboo     = UIImage(named: "Bamboo")
     static let camera     = UIImage(named: "Camera")
     static let clear      = UIImage(named: "Clear")
+    static let dropdown   = UIImage(named: "Dropdown")
     static let expand     = UIImage(named: "Expand")
     static let home       = UIImage(named: "Home")
     static let image      = UIImage(named: "Image")
